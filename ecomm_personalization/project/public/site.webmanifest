@@ -1,0 +1,16 @@
+{
+  "name": "E-Commerce Personalization App",
+  "short_name": "Personalization",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ec4899",
+  "description": "AI-powered e-commerce personalization system",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+} 
