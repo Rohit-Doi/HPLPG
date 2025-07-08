@@ -20,7 +20,7 @@ A full-stack e-commerce platform with advanced personalization, built with Next.
 ## Prerequisites
 
 ### System Requirements
-- **Python**: 3.10 or higher
+- **Python**: 3.11 or higher
 - **Node.js**: 18.0 or higher
 - **npm**: 9.0 or higher
 - **Git**: Latest version
