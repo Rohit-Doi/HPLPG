@@ -1,0 +1,81 @@
+{
+  "cutoff": "2025-06-08 06:56:03.521687",
+  "metrics": {
+    "department": {
+      "accuracy": 0.5601116792249731,
+      "logloss": 1.1820241424811715,
+      "baseline_accuracy": 0.5463751715503334,
+      "baseline_logloss": 1.2597222164665773
+    },
+    "persona": {
+      "accuracy": 0.7914246382164322,
+      "baseline_accuracy": 0.33661102862803954
+    },
+    "intent_cart": {
+      "auc": 0.9168925749634327,
+      "base_rate": 0.09379085932445022
+    },
+    "intent_purchase": {
+      "auc": 0.8951435062227633,
+      "base_rate": 0.014765066435415754
+    }
+  },
+  "hyperparams": {
+    "department": {
+      "num_leaves": 63,
+      "learning_rate": 0.03,
+      "min_child_samples": 100,
+      "colsample_bytree": 0.7
+    },
+    "persona": {
+      "num_leaves": 63,
+      "learning_rate": 0.03,
+      "min_child_samples": 100,
+      "colsample_bytree": 0.7
+    },
+    "intent_cart": {
+      "num_leaves": 63,
+      "learning_rate": 0.03,
+      "min_child_samples": 100,
+      "colsample_bytree": 0.7
+    },
+    "intent_purchase": {
+      "num_leaves": 63,
+      "learning_rate": 0.03,
+      "min_child_samples": 100,
+      "colsample_bytree": 0.7
+    }
+  },
+  "n_train_users": 744934,
+  "n_users_with_items": 415330,
+  "dept_by_gender": {
+    "female": {
+      "women": 0.3321255147457123,
+      "men": 0.40172362327575684,
+      "footwear": 0.11731687188148499,
+      "watches": 0.089498370885849,
+      "jewellery": 0.0007837348384782672,
+      "accessories": 0.05855174735188484
+    },
+    "male": {
+      "women": 0.18721631169319153,
+      "men": 0.5429792404174805,
+      "footwear": 0.09157175570726395,
+      "watches": 0.12718166410923004,
+      "jewellery": 0.0007168336305767298,
+      "accessories": 0.05033420771360397
+    }
+  },
+  "knn_feature_weights": {
+    "device": 0.3126155847173155,
+    "channel": 1.0,
+    "geo": 0.5841619338478505,
+    "macro": 0.3233177558844924,
+    "landing": 0.7821774783652885,
+    "daypart": 0.056426872949233556,
+    "weekend": 0.05,
+    "age": 0.05,
+    "gender": 0.2425184559453478
+  },
+  "seconds": 215.4
+}

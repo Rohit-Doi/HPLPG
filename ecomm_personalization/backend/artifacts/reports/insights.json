@@ -1,0 +1,1380 @@
+{
+  "overview": {
+    "events": 6456760,
+    "users": 744934,
+    "sessions": 995942,
+    "transactions": 18335,
+    "revenue": 3667626.24,
+    "items": 359,
+    "dateRange": [
+      "2024-06-11 07:00:21.924502",
+      "2025-06-08 06:58:13.803792"
+    ]
+  },
+  "dataQuality": {
+    "raw_rows": 6593721,
+    "raw_users": 744960,
+    "exact_duplicates_removed": 0,
+    "page_view_product_paths_ignored": 2138423,
+    "demographic_noise": {
+      "users_with_conflicting_gender_pct": 66.6,
+      "users_with_conflicting_age_pct": 92.4,
+      "note": "Demographic columns vary row-to-row for the same visitor; resolved by per-visitor majority vote."
+    },
+    "bot_users_removed": 26,
+    "bot_events_removed": 136961,
+    "sessions": 995942,
+    "session_start_events": 996383,
+    "session_engagement_mix": {
+      "product_explorer": 0.4639,
+      "bouncer": 0.2506,
+      "browser": 0.1999,
+      "cart_abandoner": 0.0674,
+      "converter": 0.0182
+    },
+    "tx_lines": 27500,
+    "tx_unique_transactions": 18335,
+    "tx_join": {
+      "purchase_events": 18248,
+      "unique_purchase_transactions": 18240,
+      "transactions_matched": 18220,
+      "match_rate_pct": 99.89,
+      "tx_lines_without_activity": 170,
+      "revenue_reconciliation_within_1pct": 83.25
+    },
+    "interactions": {
+      "view_item": 1132447,
+      "add_to_cart": 212606,
+      "purchase": 27330
+    },
+    "users_clean": 744934,
+    "segment_mix": {
+      "window_shopper": 293639,
+      "casual_browser": 177472,
+      "bouncer": 149897,
+      "cart_abandoner": 62168,
+      "frequent_viewer": 44615,
+      "one_time_purchaser": 16309,
+      "repeat_purchaser": 834
+    },
+    "events_clean": 6456760,
+    "date_range": [
+      "2024-06-11 07:00:21.924502",
+      "2025-06-08 06:58:13.803792"
+    ],
+    "seconds": 26.7
+  },
+  "funnel": [
+    {
+      "stage": "Sessions",
+      "sessions": 995942,
+      "rate": 1.0
+    },
+    {
+      "stage": "Viewed a product",
+      "sessions": 543969,
+      "rate": 0.5462
+    },
+    {
+      "stage": "Added to bag",
+      "sessions": 82417,
+      "rate": 0.0828
+    },
+    {
+      "stage": "Purchased",
+      "sessions": 18088,
+      "rate": 0.0182
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "users": 302392,
+      "sessions": 365146,
+      "cartRate": 0.1488,
+      "conversionRate": 0.0157,
+      "revenue": 1179547.88
+    },
+    {
+      "channel": "Organic Search",
+      "users": 203621,
+      "sessions": 280119,
+      "cartRate": 0.0314,
+      "conversionRate": 0.0112,
+      "revenue": 583183.88
+    },
+    {
+      "channel": "Paid Search",
+      "users": 123556,
+      "sessions": 191130,
+      "cartRate": 0.0592,
+      "conversionRate": 0.0286,
+      "revenue": 991250.88
+    },
+    {
+      "channel": "Email",
+      "users": 41041,
+      "sessions": 68341,
+      "cartRate": 0.0974,
+      "conversionRate": 0.0494,
+      "revenue": 551956.81
+    },
+    {
+      "channel": "Paid Social",
+      "users": 40884,
+      "sessions": 51805,
+      "cartRate": 0.0135,
+      "conversionRate": 0.0027,
+      "revenue": 31600.72
+    },
+    {
+      "channel": "Other",
+      "users": 19963,
+      "sessions": 22182,
+      "cartRate": 0.0102,
+      "conversionRate": 0.0045,
+      "revenue": 25277.72
+    },
+    {
+      "channel": "Organic Social",
+      "users": 8141,
+      "sessions": 9282,
+      "cartRate": 0.0149,
+      "conversionRate": 0.0037,
+      "revenue": 10263.97
+    },
+    {
+      "channel": "Referral",
+      "users": 3844,
+      "sessions": 5174,
+      "cartRate": 0.0309,
+      "conversionRate": 0.0122,
+      "revenue": 10359.73
+    },
+    {
+      "channel": "AI Assistant",
+      "users": 1003,
+      "sessions": 1510,
+      "cartRate": 0.0192,
+      "conversionRate": 0.0026,
+      "revenue": 283.38
+    },
+    {
+      "channel": "Affiliate",
+      "users": 903,
+      "sessions": 1152,
+      "cartRate": 0.0547,
+      "conversionRate": 0.0286,
+      "revenue": 5390.56
+    },
+    {
+      "channel": "SMS",
+      "users": 52,
+      "sessions": 101,
+      "cartRate": 0.099,
+      "conversionRate": 0.0792,
+      "revenue": 2413.42
+    }
+  ],
+  "devices": [
+    {
+      "device": "mobile",
+      "users": 338305,
+      "sessions": 496955,
+      "cartRate": 0.0434,
+      "conversionRate": 0.0191,
+      "revenue": 1674411.0
+    },
+    {
+      "device": "desktop",
+      "users": 394475,
+      "sessions": 481885,
+      "cartRate": 0.1247,
+      "conversionRate": 0.0171,
+      "revenue": 1660457.0
+    },
+    {
+      "device": "tablet",
+      "users": 12504,
+      "sessions": 17102,
+      "cartRate": 0.0428,
+      "conversionRate": 0.0211,
+      "revenue": 56661.01
+    }
+  ],
+  "geo": [
+    {
+      "geo": "New York",
+      "users": 125052,
+      "conversionRate": 0.0096
+    },
+    {
+      "geo": "California",
+      "users": 105149,
+      "conversionRate": 0.0178
+    },
+    {
+      "geo": "Unknown",
+      "users": 63802,
+      "conversionRate": 0.0004
+    },
+    {
+      "geo": "Texas",
+      "users": 47944,
+      "conversionRate": 0.0251
+    },
+    {
+      "geo": "Florida",
+      "users": 43230,
+      "conversionRate": 0.0241
+    },
+    {
+      "geo": "Virginia",
+      "users": 29316,
+      "conversionRate": 0.0167
+    },
+    {
+      "geo": "Illinois",
+      "users": 25592,
+      "conversionRate": 0.0261
+    },
+    {
+      "geo": "Georgia",
+      "users": 19236,
+      "conversionRate": 0.0241
+    },
+    {
+      "geo": "Arizona",
+      "users": 15758,
+      "conversionRate": 0.0288
+    },
+    {
+      "geo": "Canada",
+      "users": 15088,
+      "conversionRate": 0.0074
+    },
+    {
+      "geo": "Pennsylvania",
+      "users": 14763,
+      "conversionRate": 0.0249
+    },
+    {
+      "geo": "Washington",
+      "users": 14727,
+      "conversionRate": 0.023
+    },
+    {
+      "geo": "North Carolina",
+      "users": 14577,
+      "conversionRate": 0.0249
+    },
+    {
+      "geo": "Ohio",
+      "users": 13956,
+      "conversionRate": 0.0262
+    },
+    {
+      "geo": "Michigan",
+      "users": 13771,
+      "conversionRate": 0.0253
+    }
+  ],
+  "hourly": [
+    {
+      "hour": 0,
+      "sessions": 49890,
+      "conversionRate": 0.018
+    },
+    {
+      "hour": 1,
+      "sessions": 49890,
+      "conversionRate": 0.0169
+    },
+    {
+      "hour": 2,
+      "sessions": 45674,
+      "conversionRate": 0.0156
+    },
+    {
+      "hour": 3,
+      "sessions": 39179,
+      "conversionRate": 0.0125
+    },
+    {
+      "hour": 4,
+      "sessions": 32021,
+      "conversionRate": 0.011
+    },
+    {
+      "hour": 5,
+      "sessions": 25619,
+      "conversionRate": 0.0091
+    },
+    {
+      "hour": 6,
+      "sessions": 20007,
+      "conversionRate": 0.0066
+    },
+    {
+      "hour": 7,
+      "sessions": 17873,
+      "conversionRate": 0.0049
+    },
+    {
+      "hour": 8,
+      "sessions": 18233,
+      "conversionRate": 0.0033
+    },
+    {
+      "hour": 9,
+      "sessions": 17950,
+      "conversionRate": 0.0038
+    },
+    {
+      "hour": 10,
+      "sessions": 21023,
+      "conversionRate": 0.0064
+    },
+    {
+      "hour": 11,
+      "sessions": 28340,
+      "conversionRate": 0.0125
+    },
+    {
+      "hour": 12,
+      "sessions": 37531,
+      "conversionRate": 0.0167
+    },
+    {
+      "hour": 13,
+      "sessions": 46943,
+      "conversionRate": 0.0194
+    },
+    {
+      "hour": 14,
+      "sessions": 51981,
+      "conversionRate": 0.0217
+    },
+    {
+      "hour": 15,
+      "sessions": 55771,
+      "conversionRate": 0.0234
+    },
+    {
+      "hour": 16,
+      "sessions": 58786,
+      "conversionRate": 0.0245
+    },
+    {
+      "hour": 17,
+      "sessions": 57439,
+      "conversionRate": 0.0241
+    },
+    {
+      "hour": 18,
+      "sessions": 55834,
+      "conversionRate": 0.0239
+    },
+    {
+      "hour": 19,
+      "sessions": 55332,
+      "conversionRate": 0.0226
+    },
+    {
+      "hour": 20,
+      "sessions": 55212,
+      "conversionRate": 0.0216
+    },
+    {
+      "hour": 21,
+      "sessions": 53617,
+      "conversionRate": 0.0206
+    },
+    {
+      "hour": 22,
+      "sessions": 51622,
+      "conversionRate": 0.0197
+    },
+    {
+      "hour": 23,
+      "sessions": 50175,
+      "conversionRate": 0.0206
+    }
+  ],
+  "segments": [
+    {
+      "id": "window_shopper",
+      "label": "Window shoppers",
+      "description": "Viewed 1-4 products, no cart.",
+      "users": 293639,
+      "share": 0.3942,
+      "conversionRate": 0.0,
+      "avgRevenue": 0.0
+    },
+    {
+      "id": "casual_browser",
+      "label": "Casual browsers",
+      "description": "Browsed pages/collections but never opened a product.",
+      "users": 177472,
+      "share": 0.2382,
+      "conversionRate": 0.0,
+      "avgRevenue": 0.0
+    },
+    {
+      "id": "bouncer",
+      "label": "Bouncers",
+      "description": "Single short visit (<= 2 events).",
+      "users": 149897,
+      "share": 0.2012,
+      "conversionRate": 0.0,
+      "avgRevenue": 0.0
+    },
+    {
+      "id": "cart_abandoner",
+      "label": "Cart abandoners",
+      "description": "Added to bag but never checked out - high intent, needs reassurance/urgency.",
+      "users": 62168,
+      "share": 0.0835,
+      "conversionRate": 0.0,
+      "avgRevenue": 0.0
+    },
+    {
+      "id": "frequent_viewer",
+      "label": "Frequent viewers",
+      "description": "5+ product views or 3+ sessions without a cart - researching.",
+      "users": 44615,
+      "share": 0.0599,
+      "conversionRate": 0.0,
+      "avgRevenue": 0.0
+    },
+    {
+      "id": "one_time_purchaser",
+      "label": "One-time purchasers",
+      "description": "Converted once; prime for a second-order nudge.",
+      "users": 16309,
+      "share": 0.0219,
+      "conversionRate": 1.0,
+      "avgRevenue": 178.75
+    },
+    {
+      "id": "repeat_purchaser",
+      "label": "Repeat purchasers",
+      "description": "2+ orders - loyal, high lifetime value.",
+      "users": 834,
+      "share": 0.0011,
+      "conversionRate": 1.0,
+      "avgRevenue": 571.1
+    }
+  ],
+  "personas": [
+    {
+      "id": "p0",
+      "name": "Direct Menswear Quick Glancers",
+      "tagline": "Short visits, need an instant hook",
+      "description": "Short visits, need an instant hook. 33.7% of visitors; conversion 0.0% (site avg 2.3%), 0.2 product views on average; top channel Direct (86%), 20% mobile.",
+      "users": 250753,
+      "share": 0.3366,
+      "conversionRate": 0.0,
+      "topDepartments": [
+        {
+          "department": "men",
+          "share": 0.579
+        },
+        {
+          "department": "footwear",
+          "share": 0.157
+        },
+        {
+          "department": "watches",
+          "share": 0.155
+        },
+        {
+          "department": "accessories",
+          "share": 0.104
+        },
+        {
+          "department": "jewellery",
+          "share": 0.005
+        },
+        {
+          "department": "women",
+          "share": 0.0
+        }
+      ],
+      "topChannels": [
+        {
+          "channel": "Direct",
+          "share": 0.858
+        },
+        {
+          "channel": "Email",
+          "share": 0.065
+        },
+        {
+          "channel": "Other",
+          "share": 0.064
+        },
+        {
+          "channel": "Referral",
+          "share": 0.01
+        }
+      ],
+      "topItemIds": [
+        "ITEM44",
+        "ITEM62",
+        "ITEM11",
+        "ITEM75"
+      ],
+      "defaultStage": "discover"
+    },
+    {
+      "id": "p1",
+      "name": "Search-Led Menswear Quick Glancers",
+      "tagline": "Short visits, need an instant hook",
+      "description": "Short visits, need an instant hook. 23.2% of visitors; conversion 0.0% (site avg 2.3%), 0.7 product views on average; top channel Organic Search (93%), 57% mobile.",
+      "users": 172619,
+      "share": 0.2317,
+      "conversionRate": 0.0,
+      "topDepartments": [
+        {
+          "department": "men",
+          "share": 0.69
+        },
+        {
+          "department": "watches",
+          "share": 0.131
+        },
+        {
+          "department": "footwear",
+          "share": 0.111
+        },
+        {
+          "department": "accessories",
+          "share": 0.059
+        },
+        {
+          "department": "women",
+          "share": 0.008
+        },
+        {
+          "department": "jewellery",
+          "share": 0.0
+        }
+      ],
+      "topChannels": [
+        {
+          "channel": "Organic Search",
+          "share": 0.935
+        },
+        {
+          "channel": "Email",
+          "share": 0.045
+        },
+        {
+          "channel": "Other",
+          "share": 0.013
+        },
+        {
+          "channel": "Referral",
+          "share": 0.005
+        }
+      ],
+      "topItemIds": [
+        "ITEM44",
+        "ITEM177",
+        "ITEM139",
+        "ITEM45"
+      ],
+      "defaultStage": "discover"
+    },
+    {
+      "id": "p6",
+      "name": "Search-Led Mobile Window Shoppers",
+      "tagline": "Browse a few products for inspiration",
+      "description": "Browse a few products for inspiration. 11.5% of visitors; conversion 0.0% (site avg 2.3%), 1.0 product views on average; top channel Paid Search (100%), 78% mobile.",
+      "users": 85524,
+      "share": 0.1148,
+      "conversionRate": 0.0,
+      "topDepartments": [
+        {
+          "department": "men",
+          "share": 0.676
+        },
+        {
+          "department": "watches",
+          "share": 0.158
+        },
+        {
+          "department": "footwear",
+          "share": 0.119
+        },
+        {
+          "department": "accessories",
+          "share": 0.027
+        },
+        {
+          "department": "women",
+          "share": 0.02
+        },
+        {
+          "department": "jewellery",
+          "share": 0.0
+        }
+      ],
+      "topChannels": [
+        {
+          "channel": "Paid Search",
+          "share": 1.0
+        },
+        {
+          "channel": "AI Assistant",
+          "share": 0.0
+        },
+        {
+          "channel": "Affiliate",
+          "share": 0.0
+        },
+        {
+          "channel": "Direct",
+          "share": 0.0
+        }
+      ],
+      "topItemIds": [
+        "ITEM44",
+        "ITEM11",
+        "ITEM75",
+        "ITEM73"
+      ],
+      "defaultStage": "explore"
+    },
+    {
+      "id": "p8",
+      "name": "Menswear Deep Researchers",
+      "tagline": "Compare many products before committing",
+      "description": "Compare many products before committing. 9.4% of visitors; conversion 0.0% (site avg 2.3%), 6.4 product views on average; top channel Organic Search (36%), 64% mobile.",
+      "users": 70168,
+      "share": 0.0942,
+      "conversionRate": 0.0,
+      "topDepartments": [
+        {
+          "department": "men",
+          "share": 0.635
+        },
+        {
+          "department": "watches",
+          "share": 0.137
+        },
+        {
+          "department": "women",
+          "share": 0.13
+        },
+        {
+          "department": "footwear",
+          "share": 0.07
+        },
+        {
+          "department": "accessories",
+          "share": 0.027
+        },
+        {
+          "department": "jewellery",
+          "share": 0.0
+        }
+      ],
+      "topChannels": [
+        {
+          "channel": "Organic Search",
+          "share": 0.36
+        },
+        {
+          "channel": "Paid Search",
+          "share": 0.244
+        },
+        {
+          "channel": "Direct",
+          "share": 0.242
+        },
+        {
+          "channel": "Email",
+          "share": 0.116
+        }
+      ],
+      "topItemIds": [
+        "ITEM44",
+        "ITEM62",
+        "ITEM11",
+        "ITEM75"
+      ],
+      "defaultStage": "explore"
+    },
+    {
+      "id": "p2",
+      "name": "Womenswear Window Shoppers",
+      "tagline": "Browse a few products for inspiration",
+      "description": "Browse a few products for inspiration. 7.1% of visitors; conversion 0.02% (site avg 2.3%), 1.5 product views on average; top channel Direct (39%), 48% mobile.",
+      "users": 52555,
+      "share": 0.0705,
+      "conversionRate": 0.0002,
+      "topDepartments": [
+        {
+          "department": "women",
+          "share": 0.979
+        },
+        {
+          "department": "men",
+          "share": 0.015
+        },
+        {
+          "department": "footwear",
+          "share": 0.003
+        },
+        {
+          "department": "watches",
+          "share": 0.002
+        },
+        {
+          "department": "accessories",
+          "share": 0.001
+        },
+        {
+          "department": "jewellery",
+          "share": 0.0
+        }
+      ],
+      "topChannels": [
+        {
+          "channel": "Direct",
+          "share": 0.394
+        },
+        {
+          "channel": "Paid Search",
+          "share": 0.27
+        },
+        {
+          "channel": "Organic Search",
+          "share": 0.232
+        },
+        {
+          "channel": "Email",
+          "share": 0.088
+        }
+      ],
+      "topItemIds": [
+        "ITEM21",
+        "ITEM22",
+        "ITEM244",
+        "ITEM19"
+      ],
+      "defaultStage": "explore"
+    },
+    {
+      "id": "p3",
+      "name": "Direct Cart Hesitators",
+      "tagline": "Build a bag, hesitate at checkout",
+      "description": "Build a bag, hesitate at checkout. 6.5% of visitors; conversion 0.0% (site avg 2.3%), 4.2 product views on average; top channel Direct (91%), 8% mobile.",
+      "users": 48770,
+      "share": 0.0655,
+      "conversionRate": 0.0,
+      "topDepartments": [
+        {
+          "department": "men",
+          "share": 0.444
+        },
+        {
+          "department": "women",
+          "share": 0.181
+        },
+        {
+          "department": "watches",
+          "share": 0.166
+        },
+        {
+          "department": "accessories",
+          "share": 0.108
+        },
+        {
+          "department": "footwear",
+          "share": 0.102
+        },
+        {
+          "department": "jewellery",
+          "share": 0.0
+        }
+      ],
+      "topChannels": [
+        {
+          "channel": "Direct",
+          "share": 0.907
+        },
+        {
+          "channel": "Organic Search",
+          "share": 0.037
+        },
+        {
+          "channel": "Paid Search",
+          "share": 0.031
+        },
+        {
+          "channel": "Email",
+          "share": 0.019
+        }
+      ],
+      "topItemIds": [
+        "ITEM114",
+        "ITEM17",
+        "ITEM75",
+        "ITEM44"
+      ],
+      "defaultStage": "buy_now"
+    },
+    {
+      "id": "p7",
+      "name": "Social-Discovered Mobile Quick Glancers",
+      "tagline": "Short visits, need an instant hook",
+      "description": "Short visits, need an instant hook. 5.3% of visitors; conversion 0.0% (site avg 2.3%), 0.5 product views on average; top channel Paid Social (100%), 92% mobile.",
+      "users": 39320,
+      "share": 0.0528,
+      "conversionRate": 0.0,
+      "topDepartments": [
+        {
+          "department": "men",
+          "share": 0.705
+        },
+        {
+          "department": "watches",
+          "share": 0.164
+        },
+        {
+          "department": "women",
+          "share": 0.112
+        },
+        {
+          "department": "footwear",
+          "share": 0.016
+        },
+        {
+          "department": "accessories",
+          "share": 0.002
+        },
+        {
+          "department": "jewellery",
+          "share": 0.0
+        }
+      ],
+      "topChannels": [
+        {
+          "channel": "Paid Social",
+          "share": 1.0
+        },
+        {
+          "channel": "AI Assistant",
+          "share": 0.0
+        },
+        {
+          "channel": "Affiliate",
+          "share": 0.0
+        },
+        {
+          "channel": "Direct",
+          "share": 0.0
+        }
+      ],
+      "topItemIds": [
+        "ITEM44",
+        "ITEM34",
+        "ITEM49",
+        "ITEM67"
+      ],
+      "defaultStage": "discover"
+    },
+    {
+      "id": "p5",
+      "name": "Womenswear Decisive Buyers",
+      "tagline": "Arrive with intent and convert",
+      "description": "Arrive with intent and convert. 2.3% of visitors; conversion 100.0% (site avg 2.3%), 6.2 product views on average; top channel Direct (32%), 53% mobile.",
+      "users": 17121,
+      "share": 0.023,
+      "conversionRate": 1.0,
+      "topDepartments": [
+        {
+          "department": "women",
+          "share": 0.532
+        },
+        {
+          "department": "men",
+          "share": 0.211
+        },
+        {
+          "department": "footwear",
+          "share": 0.146
+        },
+        {
+          "department": "accessories",
+          "share": 0.064
+        },
+        {
+          "department": "watches",
+          "share": 0.047
+        },
+        {
+          "department": "jewellery",
+          "share": 0.0
+        }
+      ],
+      "topChannels": [
+        {
+          "channel": "Direct",
+          "share": 0.316
+        },
+        {
+          "channel": "Paid Search",
+          "share": 0.302
+        },
+        {
+          "channel": "Email",
+          "share": 0.186
+        },
+        {
+          "channel": "Organic Search",
+          "share": 0.175
+        }
+      ],
+      "topItemIds": [
+        "ITEM22",
+        "ITEM44",
+        "ITEM15",
+        "ITEM7"
+      ],
+      "defaultStage": "buy_now"
+    },
+    {
+      "id": "p4",
+      "name": "Social-Discovered Menswear Window Shoppers",
+      "tagline": "Browse a few products for inspiration",
+      "description": "Browse a few products for inspiration. 1.1% of visitors; conversion 0.05% (site avg 2.3%), 1.1 product views on average; top channel Organic Social (100%), 46% mobile.",
+      "users": 8104,
+      "share": 0.0109,
+      "conversionRate": 0.0005,
+      "topDepartments": [
+        {
+          "department": "men",
+          "share": 0.666
+        },
+        {
+          "department": "women",
+          "share": 0.149
+        },
+        {
+          "department": "watches",
+          "share": 0.138
+        },
+        {
+          "department": "footwear",
+          "share": 0.035
+        },
+        {
+          "department": "accessories",
+          "share": 0.012
+        },
+        {
+          "department": "jewellery",
+          "share": 0.001
+        }
+      ],
+      "topChannels": [
+        {
+          "channel": "Organic Social",
+          "share": 1.0
+        },
+        {
+          "channel": "AI Assistant",
+          "share": 0.0
+        },
+        {
+          "channel": "Affiliate",
+          "share": 0.0
+        },
+        {
+          "channel": "Direct",
+          "share": 0.0
+        }
+      ],
+      "topItemIds": [
+        "ITEM44",
+        "ITEM62",
+        "ITEM11",
+        "ITEM75"
+      ],
+      "defaultStage": "explore"
+    }
+  ],
+  "departments": [
+    {
+      "department": "women",
+      "label": "Women",
+      "views": 218531,
+      "carts": 56537,
+      "orders": 11719,
+      "revenue": 1481233.18
+    },
+    {
+      "department": "men",
+      "label": "Men",
+      "views": 613171,
+      "carts": 82726,
+      "orders": 3867,
+      "revenue": 1417047.03
+    },
+    {
+      "department": "footwear",
+      "label": "Footwear",
+      "views": 95474,
+      "carts": 22670,
+      "orders": 3651,
+      "revenue": 351983.86
+    },
+    {
+      "department": "watches",
+      "label": "Watches",
+      "views": 151722,
+      "carts": 30670,
+      "orders": 882,
+      "revenue": 344550.4
+    },
+    {
+      "department": "jewellery",
+      "label": "Jewellery",
+      "views": 328,
+      "carts": 6,
+      "orders": 5,
+      "revenue": 0.0
+    },
+    {
+      "department": "accessories",
+      "label": "Accessories",
+      "views": 53140,
+      "carts": 19996,
+      "orders": 1942,
+      "revenue": 60478.82
+    }
+  ],
+  "catalog": {
+    "items_total": 360,
+    "merch_items": 359,
+    "displayable_items": 359,
+    "by_department": {
+      "women": 76,
+      "men": 74,
+      "accessories": 59,
+      "footwear": 50,
+      "watches": 50,
+      "jewellery": 50
+    },
+    "by_audience": {
+      "women": 164,
+      "men": 106,
+      "unisex": 89
+    },
+    "by_subcategory": [
+      {
+        "department": "accessories",
+        "subcategory": "Bags",
+        "n": 12
+      },
+      {
+        "department": "accessories",
+        "subcategory": "Belts",
+        "n": 2
+      },
+      {
+        "department": "accessories",
+        "subcategory": "Eyewear",
+        "n": 18
+      },
+      {
+        "department": "accessories",
+        "subcategory": "Hair Accessories",
+        "n": 5
+      },
+      {
+        "department": "accessories",
+        "subcategory": "Hats & Caps",
+        "n": 21
+      },
+      {
+        "department": "accessories",
+        "subcategory": "Jewellery",
+        "n": 1
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Boots",
+        "n": 7
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Flats",
+        "n": 3
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Heels & Pumps",
+        "n": 4
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Loafers & Oxfords",
+        "n": 7
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Sandals & Mules",
+        "n": 13
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Sneakers",
+        "n": 16
+      },
+      {
+        "department": "jewellery",
+        "subcategory": "Bracelets",
+        "n": 18
+      },
+      {
+        "department": "jewellery",
+        "subcategory": "Earrings",
+        "n": 2
+      },
+      {
+        "department": "jewellery",
+        "subcategory": "Necklaces & Pendants",
+        "n": 5
+      },
+      {
+        "department": "jewellery",
+        "subcategory": "Rings",
+        "n": 25
+      },
+      {
+        "department": "men",
+        "subcategory": "Clothing",
+        "n": 16
+      },
+      {
+        "department": "men",
+        "subcategory": "Ethnic Wear",
+        "n": 5
+      },
+      {
+        "department": "men",
+        "subcategory": "Jackets & Coats",
+        "n": 14
+      },
+      {
+        "department": "men",
+        "subcategory": "Jeans",
+        "n": 3
+      },
+      {
+        "department": "men",
+        "subcategory": "Knitwear",
+        "n": 8
+      },
+      {
+        "department": "men",
+        "subcategory": "Polos",
+        "n": 2
+      },
+      {
+        "department": "men",
+        "subcategory": "Shirts",
+        "n": 7
+      },
+      {
+        "department": "men",
+        "subcategory": "Sweatshirts",
+        "n": 4
+      },
+      {
+        "department": "men",
+        "subcategory": "T-Shirts & Tops",
+        "n": 4
+      },
+      {
+        "department": "men",
+        "subcategory": "Trousers & Shorts",
+        "n": 11
+      },
+      {
+        "department": "watches",
+        "subcategory": "Dive & Sport",
+        "n": 15
+      },
+      {
+        "department": "watches",
+        "subcategory": "Dress Watches",
+        "n": 8
+      },
+      {
+        "department": "watches",
+        "subcategory": "Tourbillons",
+        "n": 24
+      },
+      {
+        "department": "watches",
+        "subcategory": "Watches",
+        "n": 3
+      },
+      {
+        "department": "women",
+        "subcategory": "Clothing",
+        "n": 17
+      },
+      {
+        "department": "women",
+        "subcategory": "Dresses",
+        "n": 16
+      },
+      {
+        "department": "women",
+        "subcategory": "Ethnic Wear",
+        "n": 5
+      },
+      {
+        "department": "women",
+        "subcategory": "Jackets & Coats",
+        "n": 13
+      },
+      {
+        "department": "women",
+        "subcategory": "Jeans",
+        "n": 5
+      },
+      {
+        "department": "women",
+        "subcategory": "Knitwear",
+        "n": 2
+      },
+      {
+        "department": "women",
+        "subcategory": "Shirts",
+        "n": 1
+      },
+      {
+        "department": "women",
+        "subcategory": "Skirts",
+        "n": 1
+      },
+      {
+        "department": "women",
+        "subcategory": "Sweatshirts",
+        "n": 4
+      },
+      {
+        "department": "women",
+        "subcategory": "T-Shirts & Tops",
+        "n": 7
+      },
+      {
+        "department": "women",
+        "subcategory": "Trousers & Shorts",
+        "n": 5
+      }
+    ],
+    "displayable_share_of_interactions": 1.0,
+    "source_category_to_department": [
+      {
+        "source_category": "CATALOG_ONLY",
+        "department": "accessories",
+        "n": 3
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "accessories",
+        "n": 22
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "footwear",
+        "n": 24
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "jewellery",
+        "n": 50
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "men",
+        "n": 74
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "watches",
+        "n": 22
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "women",
+        "n": 76
+      },
+      {
+        "source_category": "CATEGORY_2",
+        "department": "accessories",
+        "n": 10
+      },
+      {
+        "source_category": "CATEGORY_2",
+        "department": "footwear",
+        "n": 19
+      },
+      {
+        "source_category": "CATEGORY_2",
+        "department": "watches",
+        "n": 27
+      },
+      {
+        "source_category": "CATEGORY_3",
+        "department": "accessories",
+        "n": 24
+      },
+      {
+        "source_category": "CATEGORY_3",
+        "department": "footwear",
+        "n": 5
+      },
+      {
+        "source_category": "CATEGORY_4",
+        "department": "footwear",
+        "n": 2
+      },
+      {
+        "source_category": "CATEGORY_4",
+        "department": "watches",
+        "n": 1
+      }
+    ],
+    "categoryInference": {
+      "labeled_items": 237,
+      "unlabeled_items": 120,
+      "loo_accuracy": 0.6954,
+      "majority_baseline": 0.6878,
+      "loo_coverage": 0.8312
+    },
+    "markdowns": {
+      "items_on_sale": 16,
+      "median_discount_pct": 16.0
+    }
+  },
+  "clustering": {
+    "k": 9,
+    "silhouette": {
+      "5": 0.1971379667520523,
+      "6": 0.2279839813709259,
+      "7": 0.2503368556499481,
+      "8": 0.2833423316478729,
+      "9": 0.29256024956703186
+    }
+  }
+}

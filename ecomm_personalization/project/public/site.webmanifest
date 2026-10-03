@@ -1,16 +1,16 @@
 {
-  "name": "E-Commerce Personalization App",
-  "short_name": "Personalization",
+  "name": "AURA — fashion store",
+  "short_name": "AURA",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ec4899",
-  "description": "AI-powered e-commerce personalization system",
+  "theme_color": "#e11d48",
+  "description": "A fashion store with an agent-generated, hyper-personalized home page",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/brand/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ]
 } 

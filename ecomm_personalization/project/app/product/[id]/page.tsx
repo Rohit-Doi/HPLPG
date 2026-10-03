@@ -1,38 +1,47 @@
-import { getProductById, getAllProductIds, initializeProductCaches, sampleProducts, getMenProductsFromImages, getWomenProductsFromImages, getAccessoriesProductsFromImages } from '../../../lib/products';
-import { getSaleProductsFromImages } from '../../../lib/server/saleProducts';
-import ProductDetailsClient from '../../../components/products/ProductDetailsClient';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import ProductDetail from '@/components/product/ProductDetail';
+import { API_URL } from '@/lib/api';
+import { CATALOG, fixImagePath, getProduct } from '@/lib/catalog';
+import type { Product } from '@/lib/types';
 
-interface ProductDetailsPageProps {
-  params: { id: string };
+type Params = { id: string };
+
+// catalog.json ids are pre-rendered; anything else is resolved on demand from the API
+export const dynamicParams = true;
+
+export function generateStaticParams() {
+  return CATALOG.map((p) => ({ id: p.id }));
 }
 
-export async function generateStaticParams() {
-  await initializeProductCaches();
-  const men = await getMenProductsFromImages();
-  const women = await getWomenProductsFromImages();
-  const accessories = await getAccessoriesProductsFromImages();
-  const sale = await getSaleProductsFromImages();
-  const sample = sampleProducts.map(p => p.id);
-  return [
-    ...sample,
-    ...men.map(p => p.id),
-    ...women.map(p => p.id),
-    ...accessories.map(p => p.id),
-    ...sale.map(p => p.id),
-  ].map(id => ({ id }));
-}
-
-export default async function ProductDetailsPage({ params }: ProductDetailsPageProps) {
-  await initializeProductCaches();
-  let product = getProductById(params.id);
-  if (!product) {
-    const saleProducts = await getSaleProductsFromImages();
-    product = saleProducts.find((p: any) => p.id === params.id);
-    // TEMP DEBUG LOG
-    console.log('Sale products IDs:', saleProducts.map(p => p.id));
-    console.log('Looking for ID:', params.id, 'Found:', !!product);
+/** Server-side lookup: catalog.json first, then GET /api/v1/products/{id} (short timeout). */
+async function resolveProduct(id: string): Promise<Product | null> {
+  const local = getProduct(id);
+  if (local) return local;
+  if (!/^[A-Za-z0-9_-]{1,40}$/.test(id)) return null;
+  try {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 4000);
+    const res = await fetch(`${API_URL}/api/v1/products/${encodeURIComponent(id)}`, { signal: ctrl.signal, cache: 'no-store' });
+    clearTimeout(t);
+    if (!res.ok) return null;
+    const body = (await res.json()) as { product?: Product };
+    if (!body?.product?.id) return null;
+    return { ...body.product, image: fixImagePath(body.product.image) };
+  } catch {
+    return null;
   }
-  if (!product) return notFound();
-  return <ProductDetailsClient product={product} />;
-} 
+}
+
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { id } = await params;
+  const p = await resolveProduct(id);
+  return { title: p ? `${p.brand} ${p.name}` : 'Product', description: p?.description };
+}
+
+export default async function ProductPage({ params }: { params: Promise<Params> }) {
+  const { id } = await params;
+  const product = await resolveProduct(id);
+  if (!product) notFound();
+  return <ProductDetail product={product} />;
+}

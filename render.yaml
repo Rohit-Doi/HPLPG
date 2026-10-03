@@ -1,0 +1,23 @@
+# Render blueprint for the AURA API (Dashboard -> New -> Blueprint -> pick this repo).
+# The storefront goes on Vercel (root directory: ecomm_personalization/project); see docs/DEPLOY.md.
+services:
+  - type: web
+    name: aura-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./ecomm_personalization/backend/Dockerfile
+    dockerContext: ./ecomm_personalization
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      # sync:false = Render asks you for the value when the blueprint is created (never stored in git)
+      - key: HPLPGA_CORS_ORIGINS          # your Vercel URL, e.g. https://aura-store.vercel.app
+        sync: false
+      - key: CLERK_PUBLISHABLE_KEY        # same pk_... as NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+        sync: false
+      - key: CLERK_SECRET_KEY             # sk_...
+        sync: false
+      - key: HPLPGA_DATABASE_URL          # Neon: postgresql+psycopg://...?sslmode=require (Render's free disk is wiped on every deploy)
+        sync: false
+      - key: PUBLIC_SITE_URL              # used in email links; same as your Vercel URL
+        sync: false

@@ -1,0 +1,1016 @@
+{
+  "protocol": {
+    "trainEnd": "2025-05-01",
+    "testStart": "2025-05-01",
+    "testEnd": "2025-06-08",
+    "validationWindow": "2025-04-01 .. 2025-05-01",
+    "testUsers": 32296,
+    "warmUsers": 6869,
+    "k": 10,
+    "secondaryFold": "tune on 2025-03-01..2025-04-01 (fit < 2025-03-01), test on 2025-04-01..2025-05-01 (fit < 2025-04-01)",
+    "description": "Models are fit only on data before the test start. Test visitors are first seen after it, so they have no history. Only first-touch context is revealed; ground truth is every catalog item they viewed, carted or bought in the test window. Blend and chain weights, alpha, kNN K and the LTR reranker were tuned/trained on a separate validation month."
+  },
+  "coldStart": [
+    {
+      "name": "random",
+      "label": "Random",
+      "description": "Uniformly random catalog items (sanity floor).",
+      "metrics": {
+        "hitRate": 0.0422,
+        "precision": 0.0043,
+        "recall": 0.0296,
+        "ndcg": 0.0146,
+        "mrr": 0.0125,
+        "coverage": 1.0,
+        "diversity": 0.8218
+      },
+      "ci": {
+        "ndcg": [
+          0.0137,
+          0.0156
+        ]
+      },
+      "liftVsPopularityPct": -92.0
+    },
+    {
+      "name": "pop",
+      "label": "Global popularity",
+      "description": "All-time bestsellers - the classic cold-start fallback.",
+      "metrics": {
+        "hitRate": 0.3405,
+        "precision": 0.0425,
+        "recall": 0.2791,
+        "ndcg": 0.1815,
+        "mrr": 0.1794,
+        "coverage": 0.0279,
+        "diversity": 0.7
+      },
+      "ci": {
+        "ndcg": [
+          0.1782,
+          0.1847
+        ]
+      },
+      "liftVsPopularityPct": 0.0
+    },
+    {
+      "name": "trend",
+      "label": "Trending (time-decayed)",
+      "description": "Recency-weighted popularity, half-life 21 days.",
+      "metrics": {
+        "hitRate": 0.3155,
+        "precision": 0.0392,
+        "recall": 0.2513,
+        "ndcg": 0.1683,
+        "mrr": 0.1718,
+        "coverage": 0.0279,
+        "diversity": 0.8
+      },
+      "ci": {
+        "ndcg": [
+          0.165,
+          0.1715
+        ]
+      },
+      "liftVsPopularityPct": -7.3
+    },
+    {
+      "name": "ctx",
+      "label": "Context back-off priors",
+      "description": "Weighted mix of hierarchical Bayesian chains: channel x device x region, location, time, landing page, season.",
+      "metrics": {
+        "hitRate": 0.3995,
+        "precision": 0.0482,
+        "recall": 0.3308,
+        "ndcg": 0.208,
+        "mrr": 0.1989,
+        "coverage": 0.4234,
+        "diversity": 0.7477
+      },
+      "ci": {
+        "ndcg": [
+          0.2048,
+          0.2113
+        ]
+      },
+      "liftVsPopularityPct": 14.6
+    },
+    {
+      "name": "knn",
+      "label": "kNN similar visitors",
+      "description": "Items of the K most similar historical visitors (MI-weighted context).",
+      "metrics": {
+        "hitRate": 0.4217,
+        "precision": 0.0508,
+        "recall": 0.3512,
+        "ndcg": 0.2234,
+        "mrr": 0.2108,
+        "coverage": 0.3343,
+        "diversity": 0.7368
+      },
+      "ci": {
+        "ndcg": [
+          0.2199,
+          0.2267
+        ]
+      },
+      "liftVsPopularityPct": 23.1
+    },
+    {
+      "name": "dept",
+      "label": "LightGBM department affinity",
+      "description": "Predicted department x in-department trend.",
+      "metrics": {
+        "hitRate": 0.3304,
+        "precision": 0.0416,
+        "recall": 0.2656,
+        "ndcg": 0.1767,
+        "mrr": 0.1783,
+        "coverage": 0.1253,
+        "diversity": 0.7224
+      },
+      "ci": {
+        "ndcg": [
+          0.1735,
+          0.1801
+        ]
+      },
+      "liftVsPopularityPct": -2.6
+    },
+    {
+      "name": "persona",
+      "label": "LightGBM persona",
+      "description": "Predicted persona x persona item mix.",
+      "metrics": {
+        "hitRate": 0.3801,
+        "precision": 0.0446,
+        "recall": 0.3132,
+        "ndcg": 0.1992,
+        "mrr": 0.194,
+        "coverage": 0.1198,
+        "diversity": 0.8105
+      },
+      "ci": {
+        "ndcg": [
+          0.1959,
+          0.2025
+        ]
+      },
+      "liftVsPopularityPct": 9.8
+    },
+    {
+      "name": "hybrid_l1",
+      "label": "Hybrid blend (context only)",
+      "description": "Tuned blend of all components - Level 1: device, channel, geo, time, landing, season.",
+      "metrics": {
+        "hitRate": 0.425,
+        "precision": 0.0513,
+        "recall": 0.3538,
+        "ndcg": 0.2243,
+        "mrr": 0.2124,
+        "coverage": 0.3259,
+        "diversity": 0.736
+      },
+      "ci": {
+        "ndcg": [
+          0.2208,
+          0.2275
+        ]
+      },
+      "liftVsPopularityPct": 23.6
+    },
+    {
+      "name": "hybrid_l2",
+      "label": "Hybrid blend (+ declared demographics)",
+      "description": "Level 2: adds the demographic and demographic x geo chains and a gender-boosted kNN.",
+      "metrics": {
+        "hitRate": 0.4263,
+        "precision": 0.0516,
+        "recall": 0.3549,
+        "ndcg": 0.2247,
+        "mrr": 0.2126,
+        "coverage": 0.337,
+        "diversity": 0.7385
+      },
+      "ci": {
+        "ndcg": [
+          0.221,
+          0.2281
+        ]
+      },
+      "liftVsPopularityPct": 23.8
+    },
+    {
+      "name": "hybrid_ltr",
+      "label": "Hybrid + LTR reranker (context only)",
+      "description": "LambdaRank re-ranking of the blend's top-50 with item, context and cross features.",
+      "metrics": {
+        "hitRate": 0.417,
+        "precision": 0.05,
+        "recall": 0.3461,
+        "ndcg": 0.2203,
+        "mrr": 0.2088,
+        "coverage": 0.3064,
+        "diversity": 0.7291
+      },
+      "ci": {
+        "ndcg": [
+          0.2166,
+          0.2235
+        ]
+      },
+      "liftVsPopularityPct": 21.4
+    },
+    {
+      "name": "hybrid_ltr_l2",
+      "label": "Hybrid + LTR reranker (+ demographics)",
+      "description": "Same reranker with declared age/gender available.",
+      "metrics": {
+        "hitRate": 0.4157,
+        "precision": 0.05,
+        "recall": 0.3456,
+        "ndcg": 0.2205,
+        "mrr": 0.2098,
+        "coverage": 0.3175,
+        "diversity": 0.7457
+      },
+      "ci": {
+        "ndcg": [
+          0.2168,
+          0.2239
+        ]
+      },
+      "liftVsPopularityPct": 21.5
+    },
+    {
+      "name": "hybrid_l2_audience",
+      "label": "Agent (+ demographics + audience rule)",
+      "description": "What the agent serves at Level 2: reranked scores x audience-match multiplier for declared gender.",
+      "metrics": {
+        "hitRate": 0.3825,
+        "precision": 0.0469,
+        "recall": 0.3139,
+        "ndcg": 0.2047,
+        "mrr": 0.1986,
+        "coverage": 0.2925,
+        "diversity": 0.693
+      },
+      "ci": {
+        "ndcg": [
+          0.2014,
+          0.208
+        ]
+      },
+      "liftVsPopularityPct": 12.8
+    }
+  ],
+  "warmStart": [
+    {
+      "name": "pop",
+      "label": "Global popularity",
+      "description": "Bestsellers, excluding the item just viewed.",
+      "metrics": {
+        "hitRate": 0.4089,
+        "precision": 0.0587,
+        "recall": 0.2618,
+        "ndcg": 0.1835,
+        "mrr": 0.217,
+        "coverage": 0.0306,
+        "diversity": 0.6749
+      },
+      "ci": {
+        "ndcg": [
+          0.1769,
+          0.1904
+        ]
+      },
+      "liftVsPopularityPct": 0.0
+    },
+    {
+      "name": "session",
+      "label": "Item-item graph (co-view + transitions)",
+      "description": "Items co-viewed with / viewed right after the item just viewed.",
+      "metrics": {
+        "hitRate": 0.7931,
+        "precision": 0.1266,
+        "recall": 0.6501,
+        "ndcg": 0.4478,
+        "mrr": 0.4394,
+        "coverage": 0.4819,
+        "diversity": 0.7451
+      },
+      "ci": {
+        "ndcg": [
+          0.4401,
+          0.4551
+        ]
+      },
+      "liftVsPopularityPct": 144.0
+    },
+    {
+      "name": "hybrid_cold",
+      "label": "Hybrid agent (ignores session)",
+      "description": "Level-1 blend without the session signal.",
+      "metrics": {
+        "hitRate": 0.4568,
+        "precision": 0.0639,
+        "recall": 0.2987,
+        "ndcg": 0.1956,
+        "mrr": 0.2157,
+        "coverage": 0.2897,
+        "diversity": 0.6869
+      },
+      "ci": {
+        "ndcg": [
+          0.189,
+          0.2026
+        ]
+      },
+      "liftVsPopularityPct": 6.6
+    },
+    {
+      "name": "hybrid_warm",
+      "label": "Hybrid agent (Level 3, in-session)",
+      "description": "Level-1 blend + in-session graph signal.",
+      "metrics": {
+        "hitRate": 0.7936,
+        "precision": 0.1272,
+        "recall": 0.6507,
+        "ndcg": 0.449,
+        "mrr": 0.4402,
+        "coverage": 0.4763,
+        "diversity": 0.7428
+      },
+      "ci": {
+        "ndcg": [
+          0.4414,
+          0.4564
+        ]
+      },
+      "liftVsPopularityPct": 144.6
+    }
+  ],
+  "classifiers": [
+    {
+      "name": "dept_context",
+      "label": "Department affinity, 6 classes (context)",
+      "metric": "accuracy",
+      "value": 0.5374,
+      "baseline": 0.5395
+    },
+    {
+      "name": "dept_ll_context",
+      "label": "Department affinity (context)",
+      "metric": "log-loss (lower is better)",
+      "value": 1.2098,
+      "baseline": 1.2418
+    },
+    {
+      "name": "dept_context + demographics",
+      "label": "Department affinity, 6 classes (context + demographics)",
+      "metric": "accuracy",
+      "value": 0.5439,
+      "baseline": 0.5395
+    },
+    {
+      "name": "dept_ll_context + demographics",
+      "label": "Department affinity (context + demographics)",
+      "metric": "log-loss (lower is better)",
+      "value": 1.2021,
+      "baseline": 1.2418
+    },
+    {
+      "name": "intent_cart_context",
+      "label": "Cart propensity, 1st session (context)",
+      "metric": "ROC-AUC",
+      "value": 0.8499,
+      "baseline": 0.5
+    },
+    {
+      "name": "intent_purchase_context",
+      "label": "Purchase propensity, 1st session (context)",
+      "metric": "ROC-AUC",
+      "value": 0.8247,
+      "baseline": 0.5
+    },
+    {
+      "name": "intent_cart_context + demographics",
+      "label": "Cart propensity, 1st session (context + demographics)",
+      "metric": "ROC-AUC",
+      "value": 0.8677,
+      "baseline": 0.5
+    },
+    {
+      "name": "intent_purchase_context + demographics",
+      "label": "Purchase propensity, 1st session (context + demographics)",
+      "metric": "ROC-AUC",
+      "value": 0.9471,
+      "baseline": 0.5
+    },
+    {
+      "name": "persona",
+      "label": "Persona membership (9 classes)",
+      "metric": "accuracy",
+      "value": 0.8088,
+      "baseline": 0.3542
+    }
+  ],
+  "ablations": [
+    {
+      "name": "no_geo",
+      "label": "Without geography",
+      "description": "geo & place chains removed, geo/macro masked in kNN",
+      "ndcg": 0.2064,
+      "deltaPct": -8.0
+    },
+    {
+      "name": "no_time",
+      "label": "Without time of day / season",
+      "description": "time & season chains removed",
+      "ndcg": 0.2243,
+      "deltaPct": -0.0
+    },
+    {
+      "name": "no_channel",
+      "label": "Without traffic source",
+      "description": "channel-based chains removed",
+      "ndcg": 0.2236,
+      "deltaPct": -0.3
+    },
+    {
+      "name": "no_knn",
+      "label": "Without kNN similar visitors",
+      "description": "kNN weight set to 0",
+      "ndcg": 0.2072,
+      "deltaPct": -7.6
+    },
+    {
+      "name": "no_ctx",
+      "label": "Without back-off priors",
+      "description": "ctx weight set to 0",
+      "ndcg": 0.2238,
+      "deltaPct": -0.2
+    },
+    {
+      "name": "no_ml",
+      "label": "Without LightGBM (dept + persona)",
+      "description": "department and persona weights set to 0",
+      "ndcg": 0.224,
+      "deltaPct": -0.1
+    }
+  ],
+  "sensitivity": [
+    {
+      "signal": "region",
+      "label": "Change region",
+      "itemsChangedOf10": 5.1
+    },
+    {
+      "signal": "device",
+      "label": "Change device",
+      "itemsChangedOf10": 4.9
+    },
+    {
+      "signal": "channel",
+      "label": "Change channel",
+      "itemsChangedOf10": 8.2
+    },
+    {
+      "signal": "daypart",
+      "label": "Change daypart",
+      "itemsChangedOf10": 3.2
+    },
+    {
+      "signal": "gender=female",
+      "label": "Declare female",
+      "itemsChangedOf10": 8.7,
+      "audienceShareBefore": 0.232,
+      "audienceShareAfter": 1.0,
+      "womenDeptShareAfter": 0.773
+    },
+    {
+      "signal": "gender=male",
+      "label": "Declare male",
+      "itemsChangedOf10": 5.8,
+      "audienceShareBefore": 0.582,
+      "audienceShareAfter": 1.0,
+      "womenDeptShareAfter": 0.0
+    }
+  ],
+  "byChannel": [
+    {
+      "channel": "Direct",
+      "users": 12741,
+      "ndcgModel": 0.1232,
+      "ndcgPopularity": 0.1045,
+      "liftPct": 17.9
+    },
+    {
+      "channel": "Organic Search",
+      "users": 9023,
+      "ndcgModel": 0.2973,
+      "ndcgPopularity": 0.2256,
+      "liftPct": 31.8
+    },
+    {
+      "channel": "Paid Search",
+      "users": 6856,
+      "ndcgModel": 0.2867,
+      "ndcgPopularity": 0.2578,
+      "liftPct": 11.2
+    },
+    {
+      "channel": "Paid Social",
+      "users": 1218,
+      "ndcgModel": 0.278,
+      "ndcgPopularity": 0.1893,
+      "liftPct": 46.9
+    },
+    {
+      "channel": "Email",
+      "users": 955,
+      "ndcgModel": 0.1761,
+      "ndcgPopularity": 0.1637,
+      "liftPct": 7.6
+    },
+    {
+      "channel": "Other",
+      "users": 706,
+      "ndcgModel": 0.2339,
+      "ndcgPopularity": 0.2059,
+      "liftPct": 13.6
+    },
+    {
+      "channel": "Organic Social",
+      "users": 370,
+      "ndcgModel": 0.3208,
+      "ndcgPopularity": 0.2987,
+      "liftPct": 7.4
+    },
+    {
+      "channel": "AI Assistant",
+      "users": 254,
+      "ndcgModel": 0.2258,
+      "ndcgPopularity": 0.1746,
+      "liftPct": 29.4
+    },
+    {
+      "channel": "Referral",
+      "users": 169,
+      "ndcgModel": 0.2812,
+      "ndcgPopularity": 0.2283,
+      "liftPct": 23.2
+    }
+  ],
+  "byDevice": [
+    {
+      "device": "desktop",
+      "users": 16817,
+      "ndcgModel": 0.1524,
+      "ndcgPopularity": 0.1212,
+      "liftPct": 25.8
+    },
+    {
+      "device": "mobile",
+      "users": 15008,
+      "ndcgModel": 0.2943,
+      "ndcgPopularity": 0.2473,
+      "liftPct": 19.0
+    },
+    {
+      "device": "tablet",
+      "users": 471,
+      "ndcgModel": 0.2842,
+      "ndcgPopularity": 0.239,
+      "liftPct": 18.9
+    }
+  ],
+  "byGeo": [
+    {
+      "geo": "California",
+      "users": 5267,
+      "ndcgModel": 0.1788,
+      "ndcgPopularity": 0.1406,
+      "liftPct": 27.2
+    },
+    {
+      "geo": "New York",
+      "users": 4754,
+      "ndcgModel": 0.1156,
+      "ndcgPopularity": 0.0837,
+      "liftPct": 38.2
+    },
+    {
+      "geo": "Texas",
+      "users": 2264,
+      "ndcgModel": 0.2239,
+      "ndcgPopularity": 0.196,
+      "liftPct": 14.2
+    },
+    {
+      "geo": "Florida",
+      "users": 1807,
+      "ndcgModel": 0.2729,
+      "ndcgPopularity": 0.2328,
+      "liftPct": 17.2
+    },
+    {
+      "geo": "Unknown",
+      "users": 1653,
+      "ndcgModel": 0.0811,
+      "ndcgPopularity": 0.0569,
+      "liftPct": 42.5
+    },
+    {
+      "geo": "Illinois",
+      "users": 910,
+      "ndcgModel": 0.232,
+      "ndcgPopularity": 0.1982,
+      "liftPct": 17.0
+    },
+    {
+      "geo": "Virginia",
+      "users": 809,
+      "ndcgModel": 0.2738,
+      "ndcgPopularity": 0.2262,
+      "liftPct": 21.0
+    },
+    {
+      "geo": "Georgia",
+      "users": 736,
+      "ndcgModel": 0.3041,
+      "ndcgPopularity": 0.2733,
+      "liftPct": 11.3
+    },
+    {
+      "geo": "Washington",
+      "users": 735,
+      "ndcgModel": 0.2255,
+      "ndcgPopularity": 0.1963,
+      "liftPct": 14.9
+    },
+    {
+      "geo": "Ohio",
+      "users": 687,
+      "ndcgModel": 0.2542,
+      "ndcgPopularity": 0.2173,
+      "liftPct": 17.0
+    },
+    {
+      "geo": "Canada",
+      "users": 674,
+      "ndcgModel": 0.248,
+      "ndcgPopularity": 0.1819,
+      "liftPct": 36.3
+    },
+    {
+      "geo": "New Jersey",
+      "users": 636,
+      "ndcgModel": 0.2303,
+      "ndcgPopularity": 0.2002,
+      "liftPct": 15.0
+    }
+  ],
+  "byGender": [
+    {
+      "gender": "female",
+      "users": 2398,
+      "ndcgPopularity": 0.1761,
+      "ndcgContextOnly": 0.2266,
+      "ndcgWithDemographics": 0.2399,
+      "ndcgAgentAudienceRule": 0.1364
+    },
+    {
+      "gender": "male",
+      "users": 29898,
+      "ndcgPopularity": 0.1819,
+      "ndcgContextOnly": 0.2198,
+      "ndcgWithDemographics": 0.2189,
+      "ndcgAgentAudienceRule": 0.2102
+    }
+  ],
+  "secondaryFold": [
+    {
+      "name": "pop",
+      "label": "Global popularity",
+      "ndcg": 0.1983,
+      "hitRate": 0.3625,
+      "liftVsPopularityPct": 0.0
+    },
+    {
+      "name": "ctx",
+      "label": "Context back-off priors",
+      "ndcg": 0.2284,
+      "hitRate": 0.4292,
+      "liftVsPopularityPct": 15.2
+    },
+    {
+      "name": "knn",
+      "label": "kNN similar visitors",
+      "ndcg": 0.2379,
+      "hitRate": 0.4426,
+      "liftVsPopularityPct": 20.0
+    },
+    {
+      "name": "hybrid_l1",
+      "label": "Hybrid blend (context only)",
+      "ndcg": 0.2376,
+      "hitRate": 0.4473,
+      "liftVsPopularityPct": 19.8
+    },
+    {
+      "name": "hybrid_ltr",
+      "label": "Hybrid + LTR reranker (context only)",
+      "ndcg": 0.239,
+      "hitRate": 0.4504,
+      "liftVsPopularityPct": 20.5
+    },
+    {
+      "name": "hybrid_ltr_l2",
+      "label": "Hybrid + LTR reranker (+ demographics)",
+      "ndcg": 0.2409,
+      "hitRate": 0.4528,
+      "liftVsPopularityPct": 21.5
+    }
+  ],
+  "blendWeights": {
+    "pop": 0.0,
+    "trend": 0.0,
+    "dept": 0.088,
+    "persona": 0.0264,
+    "knn": 0.7898,
+    "ctx": 0.0959,
+    "session": 8.0,
+    "alpha": 10.0,
+    "knnK": 600,
+    "genderBoost": 3.0,
+    "transMix": 0.5
+  },
+  "chainWeights": {
+    "geo": 0.5405,
+    "place": 0.6136,
+    "time": 0.0233,
+    "landing": 0.2075,
+    "season": 0.1263,
+    "demo": 0.5,
+    "demo_geo": 1.0
+  },
+  "ltr": {
+    "bestIteration": 53,
+    "trainUsers": 29458,
+    "importance": [
+      {
+        "feature": "x_geo",
+        "gain": 687
+      },
+      {
+        "feature": "ch_landing",
+        "gain": 369
+      },
+      {
+        "feature": "i_subcat",
+        "gain": 343
+      },
+      {
+        "feature": "blend_rel",
+        "gain": 184
+      },
+      {
+        "feature": "x_channel",
+        "gain": 177
+      },
+      {
+        "feature": "c_persona",
+        "gain": 133
+      },
+      {
+        "feature": "c_dept",
+        "gain": 109
+      },
+      {
+        "feature": "k_cart_prop",
+        "gain": 107
+      },
+      {
+        "feature": "blend",
+        "gain": 100
+      },
+      {
+        "feature": "i_female_share",
+        "gain": 95
+      },
+      {
+        "feature": "i_age_days",
+        "gain": 81
+      },
+      {
+        "feature": "c_knn",
+        "gain": 76
+      },
+      {
+        "feature": "k_dept_proba",
+        "gain": 73
+      },
+      {
+        "feature": "ch_geo",
+        "gain": 71
+      },
+      {
+        "feature": "rank",
+        "gain": 65
+      },
+      {
+        "feature": "k_persona_conf",
+        "gain": 61
+      },
+      {
+        "feature": "ch_time",
+        "gain": 56
+      },
+      {
+        "feature": "c_trend",
+        "gain": 52
+      },
+      {
+        "feature": "ch_demo_geo",
+        "gain": 47
+      },
+      {
+        "feature": "c_ctx",
+        "gain": 43
+      },
+      {
+        "feature": "ch_demo",
+        "gain": 43
+      },
+      {
+        "feature": "i_log_price",
+        "gain": 43
+      },
+      {
+        "feature": "x_hour",
+        "gain": 42
+      },
+      {
+        "feature": "x_landing",
+        "gain": 40
+      },
+      {
+        "feature": "k_female_share_x_gender",
+        "gain": 39
+      }
+    ]
+  },
+  "hybridLiftVsPopularity": {
+    "model": "hybrid_blend",
+    "pct": 23.8,
+    "ci95": [
+      22.5,
+      25.3
+    ]
+  },
+  "validationNdcg": 0.2405,
+  "demoTuning": {
+    "ndcg": 0.2378,
+    "demo": 0.5,
+    "demo_geo": 1.0,
+    "gender_boost": 3.0,
+    "users": 8000
+  },
+  "sessionTuning": {
+    "ndcg": 0.4681,
+    "session": 8.0,
+    "trans_mix": 0.5
+  },
+  "seconds": 3908.8,
+  "modelSelection": {
+    "servedRanker": "hybrid_blend",
+    "rule": "A reranker is served only if it beats the tuned blend on both temporal folds; otherwise the blend is served.",
+    "folds": {
+      "primary": {
+        "blendNdcg": 0.2247,
+        "leanLtrNdcg": 0.216,
+        "popularityNdcg": 0.1815,
+        "leanLtrWins": false,
+        "testUsers": 32296,
+        "ci": {
+          "blend": [
+            0.221,
+            0.2281
+          ],
+          "leanLtr": [
+            0.2123,
+            0.2195
+          ]
+        }
+      },
+      "secondary": {
+        "blendNdcg": 0.2407,
+        "leanLtrNdcg": 0.2454,
+        "popularityNdcg": 0.1983,
+        "leanLtrWins": true,
+        "testUsers": 34611,
+        "ci": {
+          "blend": [
+            0.2375,
+            0.2446
+          ],
+          "leanLtr": [
+            0.2422,
+            0.2491
+          ]
+        }
+      }
+    },
+    "leanLtr": {
+      "droppedFeatures": [
+        "x_geo",
+        "x_channel",
+        "x_device",
+        "x_daypart",
+        "x_weekend",
+        "x_landing",
+        "x_macro",
+        "x_gender",
+        "x_age",
+        "i_subcat"
+      ],
+      "bestIteration": 198,
+      "importance": [
+        {
+          "feature": "ch_landing",
+          "gain": 524
+        },
+        {
+          "feature": "blend_rel",
+          "gain": 231
+        },
+        {
+          "feature": "blend",
+          "gain": 187
+        },
+        {
+          "feature": "c_persona",
+          "gain": 171
+        },
+        {
+          "feature": "c_knn",
+          "gain": 140
+        },
+        {
+          "feature": "i_age_days",
+          "gain": 138
+        },
+        {
+          "feature": "c_dept",
+          "gain": 128
+        },
+        {
+          "feature": "k_cart_prop",
+          "gain": 123
+        },
+        {
+          "feature": "c_trend",
+          "gain": 109
+        },
+        {
+          "feature": "i_log_price",
+          "gain": 95
+        },
+        {
+          "feature": "ch_time",
+          "gain": 85
+        },
+        {
+          "feature": "k_persona_conf",
+          "gain": 85
+        },
+        {
+          "feature": "ch_demo",
+          "gain": 81
+        },
+        {
+          "feature": "k_dept_proba",
+          "gain": 78
+        },
+        {
+          "feature": "i_female_share",
+          "gain": 71
+        }
+      ]
+    },
+    "fullLtrVerdict": "Full-feature LambdaRank won (+0.6% NDCG) on the secondary fold (Mar -> Apr) but lost (-1.8% NDCG) on the primary fold (May-Jun), so it is not served. Its top feature is the raw 40-level state categorical (x_geo), which does not transfer across months.",
+    "audienceRule": {
+      "strengthGrid": {
+        "0.0": 0.2407,
+        "0.15": 0.2398,
+        "0.3": 0.2384,
+        "0.5": 0.2348,
+        "1.0": 0.227
+      },
+      "chosenStrength": 0.3,
+      "tunedOn": "validation month, declared-gender visitors",
+      "note": "Rule: the largest strength whose validation NDCG is within 1.2% of the best grid point. A hard override costs ranking quality (declared women also browse men's-audience items in this data), so the nudge stays soft on the main ranking; the hero leads with the declared department and the dedicated 'For her / For him' module applies the hard filter."
+    }
+  }
+}

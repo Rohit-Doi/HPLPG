@@ -1,0 +1,10 @@
+# processed tables are rebuilt by the pipeline; only the catalog is needed to serve
+artifacts/processed/*
+!artifacts/processed/catalog.parquet
+artifacts/models_eval/
+artifacts/store.db
+artifacts/events/
+artifacts/*.log
+__pycache__/
+.pytest_cache/
+.env

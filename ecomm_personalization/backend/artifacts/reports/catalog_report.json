@@ -1,0 +1,317 @@
+{
+  "category_inference": {
+    "labeled_items": 237,
+    "unlabeled_items": 120,
+    "loo_accuracy": 0.6954,
+    "majority_baseline": 0.6878,
+    "loo_coverage": 0.8312
+  },
+  "markdowns": {
+    "items_on_sale": 16,
+    "median_discount_pct": 16.0
+  },
+  "catalog_only_items": 3,
+  "catalog": {
+    "items_total": 360,
+    "merch_items": 359,
+    "displayable_items": 359,
+    "by_department": {
+      "women": 76,
+      "men": 74,
+      "accessories": 59,
+      "footwear": 50,
+      "watches": 50,
+      "jewellery": 50
+    },
+    "by_audience": {
+      "women": 164,
+      "men": 106,
+      "unisex": 89
+    },
+    "by_subcategory": [
+      {
+        "department": "accessories",
+        "subcategory": "Bags",
+        "n": 12
+      },
+      {
+        "department": "accessories",
+        "subcategory": "Belts",
+        "n": 2
+      },
+      {
+        "department": "accessories",
+        "subcategory": "Eyewear",
+        "n": 18
+      },
+      {
+        "department": "accessories",
+        "subcategory": "Hair Accessories",
+        "n": 5
+      },
+      {
+        "department": "accessories",
+        "subcategory": "Hats & Caps",
+        "n": 21
+      },
+      {
+        "department": "accessories",
+        "subcategory": "Jewellery",
+        "n": 1
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Boots",
+        "n": 7
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Flats",
+        "n": 3
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Heels & Pumps",
+        "n": 4
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Loafers & Oxfords",
+        "n": 7
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Sandals & Mules",
+        "n": 13
+      },
+      {
+        "department": "footwear",
+        "subcategory": "Sneakers",
+        "n": 16
+      },
+      {
+        "department": "jewellery",
+        "subcategory": "Bracelets",
+        "n": 18
+      },
+      {
+        "department": "jewellery",
+        "subcategory": "Earrings",
+        "n": 2
+      },
+      {
+        "department": "jewellery",
+        "subcategory": "Necklaces & Pendants",
+        "n": 5
+      },
+      {
+        "department": "jewellery",
+        "subcategory": "Rings",
+        "n": 25
+      },
+      {
+        "department": "men",
+        "subcategory": "Clothing",
+        "n": 16
+      },
+      {
+        "department": "men",
+        "subcategory": "Ethnic Wear",
+        "n": 5
+      },
+      {
+        "department": "men",
+        "subcategory": "Jackets & Coats",
+        "n": 14
+      },
+      {
+        "department": "men",
+        "subcategory": "Jeans",
+        "n": 3
+      },
+      {
+        "department": "men",
+        "subcategory": "Knitwear",
+        "n": 8
+      },
+      {
+        "department": "men",
+        "subcategory": "Polos",
+        "n": 2
+      },
+      {
+        "department": "men",
+        "subcategory": "Shirts",
+        "n": 7
+      },
+      {
+        "department": "men",
+        "subcategory": "Sweatshirts",
+        "n": 4
+      },
+      {
+        "department": "men",
+        "subcategory": "T-Shirts & Tops",
+        "n": 4
+      },
+      {
+        "department": "men",
+        "subcategory": "Trousers & Shorts",
+        "n": 11
+      },
+      {
+        "department": "watches",
+        "subcategory": "Dive & Sport",
+        "n": 15
+      },
+      {
+        "department": "watches",
+        "subcategory": "Dress Watches",
+        "n": 8
+      },
+      {
+        "department": "watches",
+        "subcategory": "Tourbillons",
+        "n": 24
+      },
+      {
+        "department": "watches",
+        "subcategory": "Watches",
+        "n": 3
+      },
+      {
+        "department": "women",
+        "subcategory": "Clothing",
+        "n": 17
+      },
+      {
+        "department": "women",
+        "subcategory": "Dresses",
+        "n": 16
+      },
+      {
+        "department": "women",
+        "subcategory": "Ethnic Wear",
+        "n": 5
+      },
+      {
+        "department": "women",
+        "subcategory": "Jackets & Coats",
+        "n": 13
+      },
+      {
+        "department": "women",
+        "subcategory": "Jeans",
+        "n": 5
+      },
+      {
+        "department": "women",
+        "subcategory": "Knitwear",
+        "n": 2
+      },
+      {
+        "department": "women",
+        "subcategory": "Shirts",
+        "n": 1
+      },
+      {
+        "department": "women",
+        "subcategory": "Skirts",
+        "n": 1
+      },
+      {
+        "department": "women",
+        "subcategory": "Sweatshirts",
+        "n": 4
+      },
+      {
+        "department": "women",
+        "subcategory": "T-Shirts & Tops",
+        "n": 7
+      },
+      {
+        "department": "women",
+        "subcategory": "Trousers & Shorts",
+        "n": 5
+      }
+    ],
+    "displayable_share_of_interactions": 1.0,
+    "source_category_to_department": [
+      {
+        "source_category": "CATALOG_ONLY",
+        "department": "accessories",
+        "n": 3
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "accessories",
+        "n": 22
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "footwear",
+        "n": 24
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "jewellery",
+        "n": 50
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "men",
+        "n": 74
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "watches",
+        "n": 22
+      },
+      {
+        "source_category": "CATEGORY_1",
+        "department": "women",
+        "n": 76
+      },
+      {
+        "source_category": "CATEGORY_2",
+        "department": "accessories",
+        "n": 10
+      },
+      {
+        "source_category": "CATEGORY_2",
+        "department": "footwear",
+        "n": 19
+      },
+      {
+        "source_category": "CATEGORY_2",
+        "department": "watches",
+        "n": 27
+      },
+      {
+        "source_category": "CATEGORY_3",
+        "department": "accessories",
+        "n": 24
+      },
+      {
+        "source_category": "CATEGORY_3",
+        "department": "footwear",
+        "n": 5
+      },
+      {
+        "source_category": "CATEGORY_4",
+        "department": "footwear",
+        "n": 2
+      },
+      {
+        "source_category": "CATEGORY_4",
+        "department": "watches",
+        "n": 1
+      }
+    ]
+  },
+  "currency": {
+    "currency": "INR",
+    "usdToInr": 84.0,
+    "rounding": "retail endings: ...9 below \u20b91,000, ...49/...99 above"
+  }
+}

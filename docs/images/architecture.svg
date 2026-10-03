@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" width="1600" height="960" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57534e"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e11d48"/>
+    </marker>
+    <style>
+      .t  { font-size: 19px; font-weight: 700; fill: #1c1917; }
+      .h  { font-size: 15px; font-weight: 700; fill: #1c1917; }
+      .s  { font-size: 13px; fill: #44403c; }
+      .xs { font-size: 12px; fill: #57534e; }
+      .lab{ font-size: 12px; fill: #57534e; font-style: italic; }
+      .w  { font-size: 13px; font-weight: 700; fill: #ffffff; }
+      .tag{ font-size: 11px; font-weight: 700; fill: #e11d48; letter-spacing: 1px; }
+    </style>
+  </defs>
+  <rect width="1600" height="960" fill="#ffffff"/>
+
+  <!-- title -->
+  <text x="40" y="44" style="font-size:26px;font-weight:800;fill:#1c1917">AURA · system architecture</text>
+  <text x="40" y="70" class="s">Cold-start landing-page agent + Indian e-commerce storefront · every page is composed per visitor and explains itself</text>
+
+  <!-- ============ shopper ============ -->
+  <rect x="40" y="96" width="360" height="104" rx="12" fill="#fde7ec" stroke="#fecdd3"/>
+  <text x="58" y="122" class="tag">SHOPPER · BROWSER</text>
+  <text x="58" y="146" class="s">First-touch context: device · UTM / referrer</text>
+  <text x="58" y="165" class="s">timezone → state · local hour · landing page</text>
+  <text x="58" y="184" class="s">then quiz answers, session clicks, sign-in</text>
+
+  <!-- ============ Clerk ============ -->
+  <rect x="1180" y="96" width="380" height="104" rx="12" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="1198" y="122" class="tag" style="fill:#4f46e5">EXTERNAL · AUTH</text>
+  <text x="1198" y="146" class="h">Clerk (hosted sign-in)</text>
+  <text x="1198" y="166" class="s">Sign-in / sign-up UI, email codes, Google, Apple</text>
+  <text x="1198" y="185" class="s">Issues short-lived RS256 session tokens (JWT)</text>
+
+  <!-- ============ storefront ============ -->
+  <rect x="40" y="236" width="360" height="330" rx="14" fill="#f8f7f6" stroke="#e7e5e4"/>
+  <text x="58" y="262" class="tag">STOREFRONT · VERCEL</text>
+  <text x="58" y="286" class="t">Next.js 15 · React · Tailwind</text>
+  <g class="s">
+    <text x="58" y="316">• Home = the agent's page + "Why this page?"</text>
+    <text x="58" y="340">• Shop · search with facets (price, colour,</text>
+    <text x="72" y="358">brand, size, style) · sale · collections</text>
+    <text x="58" y="382">• Product page: sizes, colours, reviews,</text>
+    <text x="72" y="400">PIN-code delivery estimate, similar items</text>
+    <text x="58" y="424">• Bag → checkout in ₹: coupons, points,</text>
+    <text x="72" y="442">bank offer, UPI / cards / net banking / COD</text>
+    <text x="58" y="466">• Account hub: orders, addresses, wishlist</text>
+    <text x="58" y="490">• /lab (simulate visitors) · /insights</text>
+    <text x="58" y="514">• Clerk components + route protection</text>
+  </g>
+  <text x="58" y="548" class="xs">Falls back to a bundled catalog if the API is down</text>
+
+  <!-- ============ API ============ -->
+  <rect x="460" y="236" width="680" height="330" rx="14" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+  <text x="480" y="262" class="tag">API · RENDER (DOCKER)</text>
+  <text x="480" y="286" class="t">FastAPI · Python 3.10</text>
+
+  <!-- agent -->
+  <rect x="480" y="300" width="640" height="104" rx="10" fill="#fff1f2" stroke="#fecdd3"/>
+  <text x="496" y="323" class="h">Landing Page Agent</text>
+  <text x="1104" y="323" class="xs" text-anchor="end">cold-start levels L0 → L4</text>
+  <g>
+    <rect x="496" y="334" width="92" height="30" rx="15" fill="#e11d48"/><text x="542" y="354" class="w" text-anchor="middle">Perceive</text>
+    <rect x="600" y="334" width="92" height="30" rx="15" fill="#e11d48"/><text x="646" y="354" class="w" text-anchor="middle">Infer</text>
+    <rect x="704" y="334" width="92" height="30" rx="15" fill="#e11d48"/><text x="750" y="354" class="w" text-anchor="middle">Plan</text>
+    <rect x="808" y="334" width="92" height="30" rx="15" fill="#e11d48"/><text x="854" y="354" class="w" text-anchor="middle">Compose</text>
+    <rect x="912" y="334" width="92" height="30" rx="15" fill="#e11d48"/><text x="958" y="354" class="w" text-anchor="middle">Explain</text>
+    <rect x="1016" y="334" width="92" height="30" rx="15" fill="#e11d48"/><text x="1062" y="354" class="w" text-anchor="middle">Learn</text>
+  </g>
+  <text x="496" y="390" class="xs">Modules, banners, products and copy chosen per visitor · Thompson-sampling bandit · 90/10 A/B vs popularity</text>
+
+  <!-- recommender -->
+  <rect x="480" y="416" width="312" height="134" rx="10" fill="#f8f7f6" stroke="#e7e5e4"/>
+  <text x="496" y="438" class="h">Hybrid recommender (served blend)</text>
+  <g class="s">
+    <text x="496" y="461">kNN similar visitors (K=600)</text><text x="776" y="461" text-anchor="end">0.79</text>
+    <text x="496" y="480">Back-off priors, 7 context chains</text><text x="776" y="480" text-anchor="end">0.10</text>
+    <text x="496" y="499">LightGBM department / persona</text><text x="776" y="499" text-anchor="end">0.09 / 0.03</text>
+    <text x="496" y="518">Item graph (in-session, L3–L4)</text><text x="776" y="518" text-anchor="end">×8</text>
+    <text x="496" y="537">Declared-gender audience nudge</text><text x="776" y="537" text-anchor="end">0.3</text>
+  </g>
+
+  <!-- store services -->
+  <rect x="808" y="416" width="312" height="134" rx="10" fill="#f8f7f6" stroke="#e7e5e4"/>
+  <text x="824" y="438" class="h">Store services</text>
+  <g class="s">
+    <text x="824" y="461">Catalog search, facets, reviews, similar</text>
+    <text x="824" y="480">Cart, wishlist, points, coupons (₹ INR)</text>
+    <text x="824" y="499">Checkout, orders, stock, cancel / return</text>
+    <text x="824" y="518">Clerk token check (JWKS) → our account</text>
+    <text x="824" y="537">Event log → live trending, privacy export</text>
+  </g>
+
+  <!-- ============ right column ============ -->
+  <rect x="1180" y="236" width="380" height="150" rx="14" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="1198" y="262" class="tag" style="fill:#15803d">DATABASE · SQLALCHEMY</text>
+  <text x="1198" y="286" class="h">Neon Postgres (production)</text>
+  <text x="1198" y="305" class="h">SQLite file (local development)</text>
+  <text x="1198" y="331" class="s">users · addresses · orders · cart · wishlist</text>
+  <text x="1198" y="350" class="s">reviews · points ledger · coupons · events</text>
+  <text x="1198" y="372" class="xs">Clerk keeps identities; shopping data stays here</text>
+
+  <rect x="1180" y="404" width="380" height="162" rx="14" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="1198" y="430" class="tag" style="fill:#b45309">OPTIONAL · WORK WITHOUT KEYS</text>
+  <g class="s">
+    <text x="1198" y="456"><tspan font-weight="700" fill="#1c1917">Razorpay</tspan> payments → simulated mode</text>
+    <text x="1212" y="474" class="xs">order + HMAC signature + amount check built in</text>
+    <text x="1198" y="500"><tspan font-weight="700" fill="#1c1917">SMTP</tspan> order emails → outbox.log</text>
+    <text x="1198" y="526"><tspan font-weight="700" fill="#1c1917">Claude</tspan> hero copy → templates</text>
+    <text x="1212" y="544" class="xs">non-blocking, cached per visitor type</text>
+  </g>
+
+  <!-- ============ offline pipeline ============ -->
+  <rect x="40" y="626" width="1520" height="300" rx="14" fill="#f8f7f6" stroke="#e7e5e4"/>
+  <text x="58" y="652" class="tag">OFFLINE ML PIPELINE · python -m hplpga.pipeline.run</text>
+  <text x="58" y="676" class="t">Data → clean → catalog → models → temporal evaluation → model selection</text>
+
+  <g>
+    <rect x="58"   y="696" width="168" height="124" rx="10" fill="#ffffff" stroke="#d6d3d1"/>
+    <text x="70" y="718" class="h">1 Ingest &amp; clean</text>
+    <text x="70" y="740" class="xs">6.59M events, 27.5k</text><text x="70" y="757" class="xs">transaction lines · bots</text><text x="70" y="774" class="xs">removed · demographic</text><text x="70" y="791" class="xs">majority vote · income</text><text x="70" y="808" class="xs">leak excluded</text>
+
+    <rect x="244"  y="696" width="168" height="124" rx="10" fill="#ffffff" stroke="#d6d3d1"/>
+    <text x="256" y="718" class="h">2 Catalog</text>
+    <text x="256" y="740" class="xs">359 products, 6 depts,</text><text x="256" y="757" class="xs">41 subcategories · photos</text><text x="256" y="774" class="xs">→ colour, material, sizes</text><text x="256" y="791" class="xs">· audience from viewers'</text><text x="256" y="808" class="xs">gender mix · ₹ prices</text>
+
+    <rect x="430"  y="696" width="168" height="124" rx="10" fill="#ffffff" stroke="#d6d3d1"/>
+    <text x="442" y="718" class="h">3 Storefront</text>
+    <text x="442" y="740" class="xs">16 observed markdowns</text><text x="442" y="757" class="xs">+ 44 data-driven</text><text x="442" y="774" class="xs">clearance discounts ·</text><text x="442" y="791" class="xs">collections · 20 banner</text><text x="442" y="808" class="xs">creatives (Pillow)</text>
+
+    <rect x="616"  y="696" width="168" height="124" rx="10" fill="#ffffff" stroke="#d6d3d1"/>
+    <text x="628" y="718" class="h">4 Segments</text>
+    <text x="628" y="740" class="xs">7 engagement segments</text><text x="628" y="757" class="xs">9 K-Means personas,</text><text x="628" y="774" class="xs">auto-named; predicted</text><text x="628" y="791" class="xs">for new visitors with</text><text x="628" y="808" class="xs">81% accuracy</text>
+
+    <rect x="802"  y="696" width="168" height="124" rx="10" fill="#ffffff" stroke="#d6d3d1"/>
+    <text x="814" y="718" class="h">5 Train</text>
+    <text x="814" y="740" class="xs">Dirichlet back-off</text><text x="814" y="757" class="xs">priors · kNN index ·</text><text x="814" y="774" class="xs">LightGBM (dept, persona,</text><text x="814" y="791" class="xs">intent) · co-view +</text><text x="814" y="808" class="xs">transition item graph</text>
+
+    <rect x="988"  y="696" width="168" height="124" rx="10" fill="#e11d48" stroke="#e11d48"/>
+    <text x="1000" y="718" class="w" style="font-size:15px">6 Evaluate</text>
+    <text x="1000" y="740" class="xs" style="fill:#ffe4e6">Fit &lt; 1 May 2025, test</text><text x="1000" y="757" class="xs" style="fill:#ffe4e6">on 32,296 brand-new</text><text x="1000" y="774" class="xs" style="fill:#ffe4e6">visitors · tuned on April</text><text x="1000" y="791" class="xs" style="fill:#ffe4e6">· 2nd fold Mar → Apr ·</text><text x="1000" y="808" class="xs" style="fill:#ffe4e6">bootstrap CIs, ablations</text>
+
+    <rect x="1174" y="696" width="168" height="124" rx="10" fill="#ffffff" stroke="#d6d3d1"/>
+    <text x="1186" y="718" class="h">7 Select</text>
+    <text x="1186" y="740" class="xs">Reranker served only if</text><text x="1186" y="757" class="xs">it wins both folds →</text><text x="1186" y="774" class="xs">LambdaRank rejected ·</text><text x="1186" y="791" class="xs">audience nudge 0.3</text><text x="1186" y="808" class="xs">chosen on validation</text>
+
+    <rect x="1360" y="696" width="182" height="124" rx="10" fill="#1c1917" stroke="#1c1917"/>
+    <text x="1372" y="718" class="w" style="font-size:15px">Artifacts</text>
+    <text x="1372" y="740" class="xs" style="fill:#e7e5e4">models/*.joblib ·</text><text x="1372" y="757" class="xs" style="fill:#e7e5e4">blend.json · personas</text><text x="1372" y="774" class="xs" style="fill:#e7e5e4">catalog.parquet</text><text x="1372" y="791" class="xs" style="fill:#e7e5e4">reports/*.json</text><text x="1372" y="808" class="xs" style="fill:#e7e5e4">project/data/*.json</text>
+  </g>
+  <g stroke="#a8a29e" stroke-width="1.5" marker-end="url(#a)">
+    <line x1="226" y1="758" x2="242" y2="758"/><line x1="412" y1="758" x2="428" y2="758"/><line x1="598" y1="758" x2="614" y2="758"/>
+    <line x1="784" y1="758" x2="800" y2="758"/><line x1="970" y1="758" x2="986" y2="758"/><line x1="1156" y1="758" x2="1172" y2="758"/><line x1="1342" y1="758" x2="1358" y2="758"/>
+  </g>
+  <text x="58" y="852" class="s"><tspan font-weight="700" fill="#1c1917">Inputs</tspan>  Data/dataset1_final.csv (GA4-style events) · Data/dataset2_final.csv (transactions) · product photos in project/public/{women, men, Shoes, Watches, Jewelry, Bags, Accessories}</text>
+  <text x="58" y="878" class="s"><tspan font-weight="700" fill="#e11d48">Result</tspan>  cold-start NDCG@10 0.225 vs 0.182 for popularity: +23.8% (95% CI 22.5–25.3) · after one click (in-session) +144.6% · geography is the strongest context signal (−8.0% without it)</text>
+  <text x="58" y="904" class="xs">Retraining: the API's event store is exported in the training schema (python -m hplpga.store.export) and appended to the history.</text>
+
+  <!-- ============ arrows ============ -->
+  <!-- shopper -> storefront -->
+  <line x1="220" y1="200" x2="220" y2="234" stroke="#57534e" stroke-width="1.8" marker-end="url(#a)"/>
+  <!-- shopper/storefront <-> clerk -->
+  <line x1="402" y1="148" x2="1178" y2="148" stroke="#6366f1" stroke-width="1.6" stroke-dasharray="6 5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="790" y="140" class="lab" text-anchor="middle">sign-in widgets · session token in the browser</text>
+  <!-- storefront <-> API -->
+  <line x1="402" y1="440" x2="458" y2="440" stroke="#57534e" stroke-width="1.8" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="430" y="428" class="lab" text-anchor="middle">REST</text>
+  <text x="430" y="462" class="lab" text-anchor="middle">+ JWT</text>
+  <!-- API -> clerk -->
+  <path d="M 1080 236 L 1080 214 L 1300 214 L 1300 202" fill="none" stroke="#6366f1" stroke-width="1.6" marker-end="url(#a)"/>
+  <text x="1190" y="230" class="lab" text-anchor="middle">JWKS · user lookup</text>
+  <!-- API <-> DB -->
+  <line x1="1142" y1="311" x2="1178" y2="311" stroke="#57534e" stroke-width="1.8" marker-start="url(#a)" marker-end="url(#a)"/>
+  <!-- API -> optional -->
+  <line x1="1142" y1="484" x2="1178" y2="484" stroke="#57534e" stroke-width="1.8" marker-end="url(#a)"/>
+  <!-- artifacts -> API (loaded at startup) -->
+  <path d="M 1451 694 L 1451 596 L 640 596 L 640 568" fill="none" stroke="#e11d48" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="1046" y="588" class="lab" text-anchor="middle" style="fill:#e11d48">trained artifacts loaded at API start-up (~1 s, ~250 MB RAM)</text>
+  <!-- feedback loop -->
+  <path d="M 1370 386 L 1370 396 L 1590 396 L 1590 610 L 150 610 L 150 624" fill="none" stroke="#15803d" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#a)"/>
+  <text x="166" y="603" class="lab" style="fill:#15803d">feedback loop: shopper events → retraining data</text>
+</svg>

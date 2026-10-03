@@ -1,15 +1,15 @@
+"""Start the HPLPGA API (builds artifacts first if they are missing).
+
+    python start_server.py            # from ecomm_personalization/
+"""
+import subprocess
 import sys
-import os
 from pathlib import Path
 
-# Add the project root to Python path
-project_root = str(Path(__file__).parent.absolute())
-if project_root not in sys.path:
-    sys.path.append(project_root)
+BACKEND = Path(__file__).resolve().parent / "backend"
 
-# Now import and run the FastAPI app
-from backend.app.main import app
+if not (BACKEND / "artifacts" / "models" / "model.joblib").exists():
+    print("Artifacts missing - running the ML pipeline (about 5-40 min, see README)...")
+    subprocess.check_call([sys.executable, "-m", "hplpga.pipeline.run"], cwd=BACKEND)
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("backend.app.main:app", host="0.0.0.0", port=8000, reload=True)
+subprocess.call([sys.executable, "-m", "uvicorn", "hplpga.api.main:app", "--host", "0.0.0.0", "--port", "8000"], cwd=BACKEND)

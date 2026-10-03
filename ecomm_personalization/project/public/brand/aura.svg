@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132" height="32" viewBox="0 0 132 32" role="img" aria-label="AURA">
+  <title>AURA</title>
+  <text x="0" y="26" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="7" fill="#282c3f">AUR</text>
+  <text x="96" y="26" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="900" fill="#e11d48">A</text>
+  <circle cx="126" cy="8" r="3" fill="#e11d48" />
+</svg>

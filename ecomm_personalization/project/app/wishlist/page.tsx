@@ -1,80 +1,86 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Heart, ShoppingCart } from 'lucide-react';
-import { useWishlist } from '@/contexts/WishlistContext';
+import { useState } from 'react';
+import { Heart, ShoppingBag, X } from 'lucide-react';
+import { toast } from 'sonner';
+import { useAuth } from '@/contexts/AuthContext';
 import { useCart } from '@/contexts/CartContext';
-import ProductCard from '@/components/ProductCard';
+import { useSession } from '@/contexts/SessionContext';
+import { useWishlist } from '@/contexts/WishlistContext';
+import { defaultSize, sizesFor } from '@/lib/catalog';
+import type { Product } from '@/lib/types';
+import ProductCard from '@/components/product/ProductCard';
 
-const WishlistPage = () => {
-  const { items, clearWishlist } = useWishlist();
-  const { addItem } = useCart();
+function WishItem({ p }: { p: Product }) {
+  const { remove } = useWishlist();
+  const cart = useCart();
+  const auth = useAuth();
+  const { recordCart } = useSession();
+  const sizes = sizesFor(p);
+  const preferred = auth.user?.profile?.sizes?.[p.department === 'footwear' ? 'shoe' : 'top'];
+  const [size, setSize] = useState<string>(preferred && sizes.includes(preferred) ? preferred : defaultSize(p) || '');
+  return (
+    <div className="relative flex flex-col">
+      <ProductCard product={p} />
+      <button type="button" onClick={() => remove(p.id)} aria-label={`Remove ${p.name} from wishlist`} className="absolute right-2.5 top-12 flex h-7 w-7 items-center justify-center rounded-full bg-white/90 shadow-sm">
+        <X className="h-3.5 w-3.5" />
+      </button>
+      <div className="mt-1 flex gap-1.5">
+        {sizes.length > 0 && (
+          <select aria-label={`Size for ${p.name}`} value={size} onChange={(e) => setSize(e.target.value)} className="w-20 rounded-md border border-gray-300 bg-white px-2 text-xs font-bold focus:border-brand-500 focus:outline-none">
+            {sizes.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+        )}
+        <button
+          type="button"
+          className="btn-outline min-w-0 flex-1 px-2 py-2 text-xs font-bold uppercase text-brand-600"
+          onClick={() => {
+            cart.add(p.id, sizes.length ? size : null);
+            recordCart(p.id);
+            remove(p.id);
+            toast.success(`Moved to bag${sizes.length ? ` (size ${size})` : ''}`);
+          }}
+        >
+          <ShoppingBag className="h-4 w-4" aria-hidden /> Move to bag
+        </button>
+      </div>
+    </div>
+  );
+}
 
-  if (items.length === 0) {
+export default function WishlistPage() {
+  const { products } = useWishlist();
+
+  if (!products.length) {
     return (
-      <div className="min-h-screen py-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center py-16"
-          >
-            <Heart className="w-24 h-24 mx-auto text-gray-300 mb-8" />
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Your Wishlist is Empty</h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Save items you love by clicking the heart icon on any product.
-            </p>
-            <Link href="/">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-              >
-                Start Browsing
-              </motion.button>
-            </Link>
-          </motion.div>
-        </div>
+      <div className="container flex flex-col items-center py-24 text-center">
+        <span className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-50">
+          <Heart className="h-9 w-9 text-brand-600" aria-hidden />
+        </span>
+        <h1 className="mt-5 text-xl font-extrabold">Your wishlist is empty</h1>
+        <p className="mt-1 text-sm text-gray-500">Tap the heart on any product to save it for later.</p>
+        <Link href="/" className="btn-primary mt-6">
+          Discover styles
+        </Link>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-between mb-8"
-        >
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2 flex items-center">
-              <Heart className="w-8 h-8 mr-3 text-red-500" />
-              My Wishlist
-            </h1>
-            <p className="text-gray-600">{items.length} {items.length === 1 ? 'item' : 'items'} saved</p>
-          </div>
-          
-          {items.length > 0 && (
-            <button
-              onClick={clearWishlist}
-              className="text-red-600 hover:text-red-800 transition-colors"
-            >
-              Clear All
-            </button>
-          )}
-        </motion.div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {items.map((product, index) => (
-            <ProductCard key={product.id} product={product} index={index} />
-          ))}
-        </div>
+    <div className="container py-8">
+      <h1 className="mb-6 text-2xl font-extrabold">
+        My wishlist <span className="text-base font-medium text-gray-500">({products.length} items)</span>
+      </h1>
+      <div className="grid grid-cols-2 gap-x-3 gap-y-6 sm:grid-cols-3 md:gap-x-5 lg:grid-cols-4 xl:grid-cols-5">
+        {products.map((p) => (
+          <WishItem key={p.id} p={p} />
+        ))}
       </div>
     </div>
   );
-};
-
-export default WishlistPage;
+}

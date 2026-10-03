@@ -1,0 +1,387 @@
+[
+ {
+  "id": "welcome",
+  "kind": "welcome_offer",
+  "palette": "welcome",
+  "eyebrow": "New to AURA?",
+  "title": "Flat 10% off your first order",
+  "subtitle": "Use code WELCOME10 at checkout. Free delivery over ₹1,499, easy 30-day returns.",
+  "cta": "Claim the offer",
+  "href": "/shop/women",
+  "badge": "WELCOME10",
+  "target": {
+   "stage": [
+    "discover"
+   ],
+   "level": [
+    0,
+    1,
+    2
+   ]
+  },
+  "image": "/banners/welcome-wide.jpg",
+  "imageSquare": "/banners/welcome-square.jpg"
+ },
+ {
+  "id": "bank",
+  "kind": "bank_offer",
+  "palette": "bank",
+  "eyebrow": "AURA Bank cards",
+  "title": "10% instant discount",
+  "subtitle": "On AURA Bank credit cards. Up to ₹1,500 off orders above ₹4,999, no code needed.",
+  "cta": "Shop now",
+  "href": "/sale",
+  "badge": "10% OFF",
+  "target": {
+   "stage": [
+    "explore",
+    "buy_now"
+   ]
+  },
+  "image": "/banners/bank-wide.jpg",
+  "imageSquare": "/banners/bank-square.jpg"
+ },
+ {
+  "id": "sale",
+  "kind": "sale",
+  "palette": "sale",
+  "eyebrow": "End of season",
+  "title": "Sale · up to 55% off",
+  "subtitle": "Real markdowns from our price history plus clearance edits across every department.",
+  "cta": "Shop the sale",
+  "href": "/sale",
+  "badge": "UP TO 55%",
+  "target": {
+   "stage": [
+    "explore",
+    "buy_now"
+   ],
+   "daypart": [
+    "evening",
+    "night"
+   ]
+  },
+  "image": "/banners/sale-wide.jpg",
+  "imageSquare": "/banners/sale-square.jpg"
+ },
+ {
+  "id": "new",
+  "kind": "new_arrivals",
+  "palette": "new",
+  "eyebrow": "Just dropped",
+  "title": "New arrivals this season",
+  "subtitle": "Fresh styles added to the catalog in the last 120 days.",
+  "cta": "See what's new",
+  "href": "/new",
+  "target": {
+   "stage": [
+    "discover",
+    "explore"
+   ]
+  },
+  "image": "/banners/new-wide.jpg",
+  "imageSquare": "/banners/new-square.jpg"
+ },
+ {
+  "id": "value",
+  "kind": "value",
+  "palette": "value",
+  "eyebrow": "Everyday style",
+  "title": "Trend picks under ₹1,999",
+  "subtitle": "Sneakers, caps, sunglasses and tees that won't dent your budget.",
+  "cta": "Shop under ₹1,999",
+  "href": "/collections/under-1999",
+  "badge": "UNDER ₹1,999",
+  "target": {
+   "channel": [
+    "Paid Social",
+    "Organic Social"
+   ],
+   "age": [
+    "18-24",
+    "25-34"
+   ]
+  },
+  "image": "/banners/value-wide.jpg",
+  "imageSquare": "/banners/value-square.jpg"
+ },
+ {
+  "id": "free-shipping",
+  "kind": "shipping",
+  "palette": "brand",
+  "eyebrow": "Delivery",
+  "title": "Free delivery over ₹1,499",
+  "subtitle": "Standard delivery in 3-6 days, express in 1-2 across India. Returns are on us for 30 days.",
+  "cta": "Start shopping",
+  "href": "/shop/men",
+  "target": {
+   "stage": [
+    "buy_now"
+   ]
+  },
+  "image": "/banners/free-shipping-wide.jpg",
+  "imageSquare": "/banners/free-shipping-square.jpg"
+ },
+ {
+  "id": "dept-women",
+  "kind": "department",
+  "palette": "women",
+  "department": "women",
+  "eyebrow": "The Women edit",
+  "title": "Dresses, jackets & the new-season edit",
+  "subtitle": "76 styles · 5-50% off on 20 of them.",
+  "cta": "Shop Women",
+  "href": "/shop/women",
+  "badge": "5-50% OFF",
+  "target": {
+   "department": [
+    "women"
+   ]
+  },
+  "image": "/banners/dept-women-wide.jpg",
+  "imageSquare": "/banners/dept-women-square.jpg"
+ },
+ {
+  "id": "dept-men",
+  "kind": "department",
+  "palette": "men",
+  "department": "men",
+  "eyebrow": "The Men edit",
+  "title": "Sharp shirts, knits & tailoring",
+  "subtitle": "74 styles · 15-50% off on 19 of them.",
+  "cta": "Shop Men",
+  "href": "/shop/men",
+  "badge": "15-50% OFF",
+  "target": {
+   "department": [
+    "men"
+   ]
+  },
+  "image": "/banners/dept-men-wide.jpg",
+  "imageSquare": "/banners/dept-men-square.jpg"
+ },
+ {
+  "id": "dept-footwear",
+  "kind": "department",
+  "palette": "footwear",
+  "department": "footwear",
+  "eyebrow": "The Footwear edit",
+  "title": "Sneakers, boots & statement heels",
+  "subtitle": "50 styles · 15-50% off on 7 of them.",
+  "cta": "Shop Footwear",
+  "href": "/shop/footwear",
+  "badge": "15-50% OFF",
+  "target": {
+   "department": [
+    "footwear"
+   ]
+  },
+  "image": "/banners/dept-footwear-wide.jpg",
+  "imageSquare": "/banners/dept-footwear-square.jpg"
+ },
+ {
+  "id": "dept-watches",
+  "kind": "department",
+  "palette": "watches",
+  "department": "watches",
+  "eyebrow": "The Watches edit",
+  "title": "Tourbillons, divers & dress watches",
+  "subtitle": "50 styles · 30-50% off on 6 of them.",
+  "cta": "Shop Watches",
+  "href": "/shop/watches",
+  "badge": "30-50% OFF",
+  "target": {
+   "department": [
+    "watches"
+   ]
+  },
+  "image": "/banners/dept-watches-wide.jpg",
+  "imageSquare": "/banners/dept-watches-square.jpg"
+ },
+ {
+  "id": "dept-jewellery",
+  "kind": "department",
+  "palette": "jewellery",
+  "department": "jewellery",
+  "eyebrow": "The Jewellery edit",
+  "title": "Rings, bracelets & everyday sparkle",
+  "subtitle": "50 styles, curated by our stylists.",
+  "cta": "Shop Jewellery",
+  "href": "/shop/jewellery",
+  "badge": null,
+  "target": {
+   "department": [
+    "jewellery"
+   ]
+  },
+  "image": "/banners/dept-jewellery-wide.jpg",
+  "imageSquare": "/banners/dept-jewellery-square.jpg"
+ },
+ {
+  "id": "dept-accessories",
+  "kind": "department",
+  "palette": "accessories",
+  "department": "accessories",
+  "eyebrow": "The Accessories edit",
+  "title": "Caps, shades & hair accessories",
+  "subtitle": "59 styles · 15-55% off on 7 of them.",
+  "cta": "Shop Accessories",
+  "href": "/shop/accessories",
+  "badge": "15-55% OFF",
+  "target": {
+   "department": [
+    "accessories"
+   ]
+  },
+  "image": "/banners/dept-accessories-wide.jpg",
+  "imageSquare": "/banners/dept-accessories-square.jpg"
+ },
+ {
+  "id": "brand-dior",
+  "kind": "brand",
+  "palette": "brand",
+  "brand": "Dior",
+  "eyebrow": "Brand spotlight",
+  "title": "Dior",
+  "subtitle": "7 styles · up to 40% off",
+  "cta": "Explore Dior",
+  "href": "/brands/dior",
+  "badge": "UP TO 40% OFF",
+  "target": {
+   "brand": [
+    "Dior"
+   ]
+  },
+  "image": "/banners/brand-dior-wide.jpg",
+  "imageSquare": "/banners/brand-dior-square.jpg"
+ },
+ {
+  "id": "brand-stone-atelier",
+  "kind": "brand",
+  "palette": "brand",
+  "brand": "Stone Atelier",
+  "eyebrow": "Brand spotlight",
+  "title": "Stone Atelier",
+  "subtitle": "9 styles · up to 40% off",
+  "cta": "Explore Stone Atelier",
+  "href": "/brands/stone-atelier",
+  "badge": "UP TO 40% OFF",
+  "target": {
+   "brand": [
+    "Stone Atelier"
+   ]
+  },
+  "image": "/banners/brand-stone-atelier-wide.jpg",
+  "imageSquare": "/banners/brand-stone-atelier-square.jpg"
+ },
+ {
+  "id": "brand-christian-louboutin",
+  "kind": "brand",
+  "palette": "brand",
+  "brand": "Christian Louboutin",
+  "eyebrow": "Brand spotlight",
+  "title": "Christian Louboutin",
+  "subtitle": "44 styles · up to 50% off",
+  "cta": "Explore Christian Louboutin",
+  "href": "/brands/christian-louboutin",
+  "badge": "UP TO 50% OFF",
+  "target": {
+   "brand": [
+    "Christian Louboutin"
+   ]
+  },
+  "image": "/banners/brand-christian-louboutin-wide.jpg",
+  "imageSquare": "/banners/brand-christian-louboutin-square.jpg"
+ },
+ {
+  "id": "brand-audemars-piguet",
+  "kind": "brand",
+  "palette": "brand",
+  "brand": "Audemars Piguet",
+  "eyebrow": "Brand spotlight",
+  "title": "Audemars Piguet",
+  "subtitle": "11 styles · up to 50% off",
+  "cta": "Explore Audemars Piguet",
+  "href": "/brands/audemars-piguet",
+  "badge": "UP TO 50% OFF",
+  "target": {
+   "brand": [
+    "Audemars Piguet"
+   ]
+  },
+  "image": "/banners/brand-audemars-piguet-wide.jpg",
+  "imageSquare": "/banners/brand-audemars-piguet-square.jpg"
+ },
+ {
+  "id": "season-spring",
+  "kind": "season",
+  "palette": "Spring",
+  "season": "Spring",
+  "eyebrow": "Spring edit",
+  "title": "Spring layers & light knits",
+  "subtitle": "Transitional jackets, cotton shirts and fresh sneakers.",
+  "cta": "Shop the spring edit",
+  "href": "/collections/spring-edit",
+  "target": {
+   "season": [
+    "Spring"
+   ]
+  },
+  "image": "/banners/season-spring-wide.jpg",
+  "imageSquare": "/banners/season-spring-square.jpg"
+ },
+ {
+  "id": "season-summer",
+  "kind": "season",
+  "palette": "Summer",
+  "season": "Summer",
+  "eyebrow": "Summer edit",
+  "title": "Summer edit: linen, shades & sandals",
+  "subtitle": "Breathable fabrics, sunglasses and open footwear.",
+  "cta": "Shop the summer edit",
+  "href": "/collections/summer-edit",
+  "target": {
+   "season": [
+    "Summer"
+   ]
+  },
+  "image": "/banners/season-summer-wide.jpg",
+  "imageSquare": "/banners/season-summer-square.jpg"
+ },
+ {
+  "id": "season-fall",
+  "kind": "season",
+  "palette": "Fall",
+  "season": "Fall",
+  "eyebrow": "Fall edit",
+  "title": "Fall essentials: coats & boots",
+  "subtitle": "Layer up with wool coats, cardigans and leather boots.",
+  "cta": "Shop the fall edit",
+  "href": "/collections/fall-edit",
+  "target": {
+   "season": [
+    "Fall"
+   ]
+  },
+  "image": "/banners/season-fall-wide.jpg",
+  "imageSquare": "/banners/season-fall-square.jpg"
+ },
+ {
+  "id": "season-winter",
+  "kind": "season",
+  "palette": "Winter",
+  "season": "Winter",
+  "eyebrow": "Winter edit",
+  "title": "Winter warmers & gifting",
+  "subtitle": "Knitwear, watches and jewellery made for the season.",
+  "cta": "Shop the winter edit",
+  "href": "/collections/winter-edit",
+  "target": {
+   "season": [
+    "Winter"
+   ]
+  },
+  "image": "/banners/season-winter-wide.jpg",
+  "imageSquare": "/banners/season-winter-square.jpg"
+ }
+]

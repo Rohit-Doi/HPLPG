@@ -1,0 +1,15 @@
+# Build context for backend/Dockerfile (docker build -f backend/Dockerfile .)
+Data/
+**/node_modules/
+**/.next/
+**/__pycache__/
+**/.pytest_cache/
+**/.env
+**/.env*.local
+project/public/
+backend/artifacts/processed/*
+!backend/artifacts/processed/catalog.parquet
+backend/artifacts/models_eval/
+backend/artifacts/events/
+backend/artifacts/store.db
+backend/artifacts/*.log

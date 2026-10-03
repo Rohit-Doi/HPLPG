@@ -1,0 +1,412 @@
+[
+  {
+    "cluster": 0,
+    "users": 250753,
+    "share": 0.33661102862803954,
+    "conversion_rate": 1.9939940898015177e-05,
+    "cart_rate_users": 0.00026320721985380037,
+    "avg_item_views": 0.24010879231753957,
+    "avg_sessions": 1.0521868133182852,
+    "avg_revenue": 0.0,
+    "mobile_share": 0.20241432804393167,
+    "department_mix": {
+      "women": 5.653989022991457e-05,
+      "men": 0.5790534498243122,
+      "footwear": 0.15726165154964977,
+      "watches": 0.15455807432435978,
+      "jewellery": 0.005408443866658464,
+      "accessories": 0.10366184054478994
+    },
+    "channel_mix": {
+      "Direct": 0.8575570382009388,
+      "Email": 0.06470510821405925,
+      "Other": 0.06388358264906102,
+      "Referral": 0.009646943406459742
+    },
+    "segment_mix": {
+      "casual_browser": 0.48162933245065864,
+      "bouncer": 0.3067680147396043,
+      "window_shopper": 0.2105976797884771,
+      "frequent_viewer": 0.0007218258605081495
+    },
+    "name": "Direct Menswear Quick Glancers",
+    "tagline": "Short visits, need an instant hook",
+    "description": "Short visits, need an instant hook. 33.7% of visitors; conversion 0.0% (site avg 2.3%), 0.2 product views on average; top channel Direct (86%), 20% mobile.",
+    "id": "p0",
+    "default_stage": "discover",
+    "top_items": [
+      "ITEM44",
+      "ITEM62",
+      "ITEM11",
+      "ITEM75",
+      "ITEM41",
+      "ITEM204",
+      "ITEM45",
+      "ITEM119"
+    ]
+  },
+  {
+    "cluster": 1,
+    "users": 172619,
+    "share": 0.23172388426357235,
+    "conversion_rate": 0.0,
+    "cart_rate_users": 0.0013671727909442182,
+    "avg_item_views": 0.7280542698080744,
+    "avg_sessions": 1.148048592565129,
+    "avg_revenue": 0.0,
+    "mobile_share": 0.5703775366558722,
+    "department_mix": {
+      "women": 0.008192668227070293,
+      "men": 0.6903948411523615,
+      "footwear": 0.11144667262780086,
+      "watches": 0.13074969540188527,
+      "jewellery": 2.5088813810937917e-05,
+      "accessories": 0.05919103377707115
+    },
+    "channel_mix": {
+      "Organic Search": 0.9346363957617644,
+      "Email": 0.04467642611763479,
+      "Other": 0.013237245030964146,
+      "Referral": 0.004524415041217943
+    },
+    "segment_mix": {
+      "window_shopper": 0.5706034677526808,
+      "bouncer": 0.23252365035135183,
+      "casual_browser": 0.18945191433156258,
+      "frequent_viewer": 0.0060537947734606275
+    },
+    "name": "Search-Led Menswear Quick Glancers",
+    "tagline": "Short visits, need an instant hook",
+    "description": "Short visits, need an instant hook. 23.2% of visitors; conversion 0.0% (site avg 2.3%), 0.7 product views on average; top channel Organic Search (93%), 57% mobile.",
+    "id": "p1",
+    "default_stage": "discover",
+    "top_items": [
+      "ITEM44",
+      "ITEM177",
+      "ITEM139",
+      "ITEM45",
+      "ITEM64",
+      "ITEM34",
+      "ITEM11",
+      "ITEM100"
+    ]
+  },
+  {
+    "cluster": 2,
+    "users": 52555,
+    "share": 0.07054987421704473,
+    "conversion_rate": 0.0001712491675387689,
+    "cart_rate_users": 0.07129673675197412,
+    "avg_item_views": 1.4718865949957187,
+    "avg_sessions": 1.1879935305870042,
+    "avg_revenue": 9.513842815067619e-05,
+    "mobile_share": 0.48170488060127487,
+    "department_mix": {
+      "women": 0.9785800389378417,
+      "men": 0.014553599713045364,
+      "footwear": 0.0030827726580232016,
+      "watches": 0.0024676189752424237,
+      "jewellery": 0.0,
+      "accessories": 0.0013159697158472807
+    },
+    "channel_mix": {
+      "Direct": 0.39353058700409094,
+      "Paid Search": 0.27034535248786984,
+      "Organic Search": 0.23152887451241558,
+      "Email": 0.08809818285605556
+    },
+    "segment_mix": {
+      "window_shopper": 0.8900199790695462,
+      "cart_abandoner": 0.07129673675197412,
+      "frequent_viewer": 0.03851203501094092,
+      "one_time_purchaser": 0.0001712491675387689
+    },
+    "name": "Womenswear Window Shoppers",
+    "tagline": "Browse a few products for inspiration",
+    "description": "Browse a few products for inspiration. 7.1% of visitors; conversion 0.02% (site avg 2.3%), 1.5 product views on average; top channel Direct (39%), 48% mobile.",
+    "id": "p2",
+    "default_stage": "explore",
+    "top_items": [
+      "ITEM21",
+      "ITEM22",
+      "ITEM244",
+      "ITEM19",
+      "ITEM15",
+      "ITEM17",
+      "ITEM7",
+      "ITEM27"
+    ]
+  },
+  {
+    "cluster": 3,
+    "users": 48770,
+    "share": 0.06546888717658209,
+    "conversion_rate": 4.1008816895632564e-05,
+    "cart_rate_users": 1.0,
+    "avg_item_views": 4.209001435308592,
+    "avg_sessions": 1.0769120360877589,
+    "avg_revenue": 0.0,
+    "mobile_share": 0.0750666393274554,
+    "department_mix": {
+      "women": 0.18073790750737723,
+      "men": 0.4435258747080764,
+      "footwear": 0.10164373916553168,
+      "watches": 0.16606361570079634,
+      "jewellery": 0.00011389522001817274,
+      "accessories": 0.10791496769820016
+    },
+    "channel_mix": {
+      "Direct": 0.9073405782243182,
+      "Organic Search": 0.03688743079762149,
+      "Paid Search": 0.03120770965757638,
+      "Email": 0.019028091039573508
+    },
+    "segment_mix": {
+      "cart_abandoner": 0.9999589911831044,
+      "one_time_purchaser": 4.1008816895632564e-05
+    },
+    "name": "Direct Cart Hesitators",
+    "tagline": "Build a bag, hesitate at checkout",
+    "description": "Build a bag, hesitate at checkout. 6.5% of visitors; conversion 0.0% (site avg 2.3%), 4.2 product views on average; top channel Direct (91%), 8% mobile.",
+    "id": "p3",
+    "default_stage": "buy_now",
+    "top_items": [
+      "ITEM114",
+      "ITEM17",
+      "ITEM75",
+      "ITEM44",
+      "ITEM35",
+      "ITEM24",
+      "ITEM27",
+      "ITEM41"
+    ]
+  },
+  {
+    "cluster": 4,
+    "users": 8104,
+    "share": 0.01087881610988356,
+    "conversion_rate": 0.0004935834155972359,
+    "cart_rate_users": 0.011846001974333662,
+    "avg_item_views": 1.1158687068114512,
+    "avg_sessions": 1.1291954590325766,
+    "avg_revenue": 0.020360317081212997,
+    "mobile_share": 0.4582922013820336,
+    "department_mix": {
+      "women": 0.14877430782027512,
+      "men": 0.6658664205822991,
+      "footwear": 0.03542122915462453,
+      "watches": 0.13762752422576677,
+      "jewellery": 0.0007743626320999517,
+      "accessories": 0.011536155584934624
+    },
+    "channel_mix": {
+      "Organic Social": 1.0,
+      "AI Assistant": 0.0,
+      "Affiliate": 0.0,
+      "Direct": 0.0
+    },
+    "segment_mix": {
+      "window_shopper": 0.6430157946692991,
+      "bouncer": 0.1936080947680158,
+      "casual_browser": 0.11586870681145113,
+      "frequent_viewer": 0.035661401776900296
+    },
+    "name": "Social-Discovered Menswear Window Shoppers",
+    "tagline": "Browse a few products for inspiration",
+    "description": "Browse a few products for inspiration. 1.1% of visitors; conversion 0.05% (site avg 2.3%), 1.1 product views on average; top channel Organic Social (100%), 46% mobile.",
+    "id": "p4",
+    "default_stage": "explore",
+    "top_items": [
+      "ITEM44",
+      "ITEM62",
+      "ITEM11",
+      "ITEM75",
+      "ITEM67",
+      "ITEM246",
+      "ITEM73",
+      "ITEM45"
+    ]
+  },
+  {
+    "cluster": 5,
+    "users": 17121,
+    "share": 0.0229832441531733,
+    "conversion_rate": 1.0,
+    "cart_rate_users": 0.9302610828806729,
+    "avg_item_views": 6.233748028736639,
+    "avg_sessions": 3.055545820921675,
+    "avg_revenue": 198.0818328857422,
+    "mobile_share": 0.5318030488873313,
+    "department_mix": {
+      "women": 0.5316272465851005,
+      "men": 0.21093063405157883,
+      "footwear": 0.14584982636276111,
+      "watches": 0.04708894420026686,
+      "jewellery": 5.677924585326725e-05,
+      "accessories": 0.06444656955443938
+    },
+    "channel_mix": {
+      "Direct": 0.3159278079551428,
+      "Paid Search": 0.30208515857718593,
+      "Email": 0.18608726125810407,
+      "Organic Search": 0.17516500204427313
+    },
+    "segment_mix": {
+      "one_time_purchaser": 0.9512878920623795,
+      "repeat_purchaser": 0.048712107937620465
+    },
+    "name": "Womenswear Decisive Buyers",
+    "tagline": "Arrive with intent and convert",
+    "description": "Arrive with intent and convert. 2.3% of visitors; conversion 100.0% (site avg 2.3%), 6.2 product views on average; top channel Direct (32%), 53% mobile.",
+    "id": "p5",
+    "default_stage": "buy_now",
+    "top_items": [
+      "ITEM22",
+      "ITEM44",
+      "ITEM15",
+      "ITEM7",
+      "ITEM21",
+      "ITEM24",
+      "ITEM6",
+      "ITEM244"
+    ]
+  },
+  {
+    "cluster": 6,
+    "users": 85524,
+    "share": 0.1148074863007998,
+    "conversion_rate": 0.0,
+    "cart_rate_users": 0.004817361208549647,
+    "avg_item_views": 0.9762055095645666,
+    "avg_sessions": 1.2094967494504467,
+    "avg_revenue": 0.0,
+    "mobile_share": 0.7756068472007858,
+    "department_mix": {
+      "women": 0.02047299437889125,
+      "men": 0.6755831919586882,
+      "footwear": 0.118978468960298,
+      "watches": 0.1575544356611365,
+      "jewellery": 3.4732472244163166e-05,
+      "accessories": 0.02737617656874186
+    },
+    "channel_mix": {
+      "Paid Search": 1.0,
+      "AI Assistant": 0.0,
+      "Affiliate": 0.0,
+      "Direct": 0.0
+    },
+    "segment_mix": {
+      "window_shopper": 0.6514779477105842,
+      "casual_browser": 0.20079743697675506,
+      "bouncer": 0.1255437070296057,
+      "frequent_viewer": 0.017363547074505402
+    },
+    "name": "Search-Led Mobile Window Shoppers",
+    "tagline": "Browse a few products for inspiration",
+    "description": "Browse a few products for inspiration. 11.5% of visitors; conversion 0.0% (site avg 2.3%), 1.0 product views on average; top channel Paid Search (100%), 78% mobile.",
+    "id": "p6",
+    "default_stage": "explore",
+    "top_items": [
+      "ITEM44",
+      "ITEM11",
+      "ITEM75",
+      "ITEM73",
+      "ITEM34",
+      "ITEM35",
+      "ITEM154",
+      "ITEM177"
+    ]
+  },
+  {
+    "cluster": 7,
+    "users": 39320,
+    "share": 0.05278319958546663,
+    "conversion_rate": 0.0,
+    "cart_rate_users": 0.0046032553407934895,
+    "avg_item_views": 0.4931586978636826,
+    "avg_sessions": 1.150025432349949,
+    "avg_revenue": 0.0,
+    "mobile_share": 0.9171922685656154,
+    "department_mix": {
+      "women": 0.11156666984903055,
+      "men": 0.7053755372133778,
+      "footwear": 0.01623606784575763,
+      "watches": 0.16420743908584923,
+      "jewellery": 0.00022222223875643273,
+      "accessories": 0.0023920637672284694
+    },
+    "channel_mix": {
+      "Paid Social": 1.0,
+      "AI Assistant": 0.0,
+      "Affiliate": 0.0,
+      "Direct": 0.0
+    },
+    "segment_mix": {
+      "bouncer": 0.5221261444557477,
+      "window_shopper": 0.31833672431332655,
+      "casual_browser": 0.1344354018311292,
+      "frequent_viewer": 0.02049847405900305
+    },
+    "name": "Social-Discovered Mobile Quick Glancers",
+    "tagline": "Short visits, need an instant hook",
+    "description": "Short visits, need an instant hook. 5.3% of visitors; conversion 0.0% (site avg 2.3%), 0.5 product views on average; top channel Paid Social (100%), 92% mobile.",
+    "id": "p7",
+    "default_stage": "discover",
+    "top_items": [
+      "ITEM44",
+      "ITEM34",
+      "ITEM49",
+      "ITEM67",
+      "ITEM45",
+      "ITEM62",
+      "ITEM46",
+      "ITEM146"
+    ]
+  },
+  {
+    "cluster": 8,
+    "users": 70168,
+    "share": 0.09419357956543802,
+    "conversion_rate": 2.8503021320259948e-05,
+    "cart_rate_users": 0.12351784289134649,
+    "avg_item_views": 6.437834910500513,
+    "avg_sessions": 2.9763852468361645,
+    "avg_revenue": 0.0,
+    "mobile_share": 0.6381113898073196,
+    "department_mix": {
+      "women": 0.13032616813952885,
+      "men": 0.6354759272780137,
+      "footwear": 0.06979668906960268,
+      "watches": 0.13729430801926865,
+      "jewellery": 3.8500230959097896e-05,
+      "accessories": 0.027068407262626958
+    },
+    "channel_mix": {
+      "Organic Search": 0.36047771063732753,
+      "Paid Search": 0.24351556264964086,
+      "Direct": 0.2423896933074906,
+      "Email": 0.11579352411355603
+    },
+    "segment_mix": {
+      "frequent_viewer": 0.552744840953141,
+      "window_shopper": 0.3151579067381142,
+      "cart_abandoner": 0.12350359138068635,
+      "casual_browser": 0.008565157906738114
+    },
+    "name": "Menswear Deep Researchers",
+    "tagline": "Compare many products before committing",
+    "description": "Compare many products before committing. 9.4% of visitors; conversion 0.0% (site avg 2.3%), 6.4 product views on average; top channel Organic Search (36%), 64% mobile.",
+    "id": "p8",
+    "default_stage": "explore",
+    "top_items": [
+      "ITEM44",
+      "ITEM62",
+      "ITEM11",
+      "ITEM75",
+      "ITEM64",
+      "ITEM34",
+      "ITEM182",
+      "ITEM22"
+    ]
+  }
+]

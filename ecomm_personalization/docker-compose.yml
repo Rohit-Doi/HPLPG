@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: aura
+      POSTGRES_PASSWORD: aura
+      POSTGRES_DB: aura
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    ports: ["5432:5432"]
+  backend:
+    build: {context: ., dockerfile: backend/Dockerfile}
+    ports: ["8000:8000"]
+    env_file: [backend/.env]
+    environment:
+      HPLPGA_CORS_ORIGINS: http://localhost:3000
+      HPLPGA_DATABASE_URL: postgresql+psycopg://aura:aura@db:5432/aura
+    depends_on: [db]
+    volumes:
+      - ./backend/artifacts:/app/artifacts      # models + store.db + events persist on the host
+  frontend:
+    build: ./project
+    ports: ["3000:3000"]
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    depends_on: [backend]
+volumes:
+  pgdata:

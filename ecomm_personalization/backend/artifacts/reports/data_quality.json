@@ -1,0 +1,295 @@
+{
+  "raw_rows": 6593721,
+  "raw_users": 744960,
+  "exact_duplicates_removed": 0,
+  "channel_mapping": [
+    {
+      "source": "(direct)",
+      "medium": "(none)",
+      "channel": "Direct",
+      "n": 2362828
+    },
+    {
+      "source": "google",
+      "medium": "organic",
+      "channel": "Organic Search",
+      "n": 1677704
+    },
+    {
+      "source": "google",
+      "medium": "cpc",
+      "channel": "Paid Search",
+      "n": 1435590
+    },
+    {
+      "source": "Klaviyo",
+      "medium": "campaign",
+      "channel": "Email",
+      "n": 483659
+    },
+    {
+      "source": "Facebook",
+      "medium": "PaidSocial",
+      "channel": "Paid Social",
+      "n": 206682
+    },
+    {
+      "source": "",
+      "medium": "",
+      "channel": "Other",
+      "n": 71178
+    },
+    {
+      "source": "bing",
+      "medium": "organic",
+      "channel": "Organic Search",
+      "n": 65399
+    },
+    {
+      "source": "bing",
+      "medium": "cpc",
+      "channel": "Paid Search",
+      "n": 55096
+    },
+    {
+      "source": "duckduckgo",
+      "medium": "organic",
+      "channel": "Organic Search",
+      "n": 40799
+    },
+    {
+      "source": "Klaviyo",
+      "medium": "flow",
+      "channel": "Email",
+      "n": 38133
+    },
+    {
+      "source": "subscriptions_system",
+      "medium": "email",
+      "channel": "Email",
+      "n": 23148
+    },
+    {
+      "source": "yahoo",
+      "medium": "organic",
+      "channel": "Organic Search",
+      "n": 15184
+    },
+    {
+      "source": "facebook",
+      "medium": "referral",
+      "channel": "Organic Social",
+      "n": 9689
+    },
+    {
+      "source": "l.instagram.com",
+      "medium": "referral",
+      "channel": "Organic Social",
+      "n": 9594
+    },
+    {
+      "source": "m.facebook.com",
+      "medium": "referral",
+      "channel": "Organic Social",
+      "n": 9390
+    },
+    {
+      "source": "youtube.com",
+      "medium": "referral",
+      "channel": "Organic Social",
+      "n": 8873
+    },
+    {
+      "source": "search.brave.com",
+      "medium": "referral",
+      "channel": "Organic Search",
+      "n": 5074
+    },
+    {
+      "source": "shareasale-analytics.com",
+      "medium": "referral",
+      "channel": "Affiliate",
+      "n": 3866
+    },
+    {
+      "source": "reddit.com",
+      "medium": "referral",
+      "channel": "Organic Social",
+      "n": 3700
+    },
+    {
+      "source": "facebook.com",
+      "medium": "referral",
+      "channel": "Organic Social",
+      "n": 3393
+    },
+    {
+      "source": "l.facebook.com",
+      "medium": "referral",
+      "channel": "Organic Social",
+      "n": 3172
+    },
+    {
+      "source": "chatgpt.com",
+      "medium": "",
+      "channel": "AI Assistant",
+      "n": 3028
+    },
+    {
+      "source": "chatgpt.com",
+      "medium": "referral",
+      "channel": "AI Assistant",
+      "n": 2993
+    },
+    {
+      "source": "lm.facebook.com",
+      "medium": "referral",
+      "channel": "Organic Social",
+      "n": 2479
+    },
+    {
+      "source": "couponcause.com",
+      "medium": "referral",
+      "channel": "Affiliate",
+      "n": 2144
+    },
+    {
+      "source": "ecosia.org",
+      "medium": "organic",
+      "channel": "Organic Search",
+      "n": 1729
+    },
+    {
+      "source": "search.leisure.com",
+      "medium": "referral",
+      "channel": "Organic Search",
+      "n": 1608
+    },
+    {
+      "source": "outlook.live.com",
+      "medium": "referral",
+      "channel": "Referral",
+      "n": 1605
+    },
+    {
+      "source": "amazon.com",
+      "medium": "referral",
+      "channel": "Referral",
+      "n": 1503
+    },
+    {
+      "source": "mail.google.com",
+      "medium": "referral",
+      "channel": "Referral",
+      "n": 1425
+    },
+    {
+      "source": "ca.search.yahoo.com",
+      "medium": "referral",
+      "channel": "Organic Search",
+      "n": 1336
+    },
+    {
+      "source": "shop_app",
+      "medium": "",
+      "channel": "Other",
+      "n": 1329
+    },
+    {
+      "source": "ph.search.yahoo.com",
+      "medium": "referral",
+      "channel": "Organic Search",
+      "n": 1292
+    },
+    {
+      "source": "retailmenot.com",
+      "medium": "referral",
+      "channel": "Affiliate",
+      "n": 1169
+    },
+    {
+      "source": "loyalty",
+      "medium": "",
+      "channel": "Email",
+      "n": 1155
+    },
+    {
+      "source": "linkhaitao.com",
+      "medium": "referral",
+      "channel": "Referral",
+      "n": 1070
+    },
+    {
+      "source": "portal.searchandnews.com",
+      "medium": "referral",
+      "channel": "Organic Search",
+      "n": 881
+    },
+    {
+      "source": "statics.teams.cdn.office.net",
+      "medium": "referral",
+      "channel": "Referral",
+      "n": 878
+    },
+    {
+      "source": "loyalty",
+      "medium": "sms",
+      "channel": "SMS",
+      "n": 876
+    },
+    {
+      "source": "sd4.bestanswersforme.com",
+      "medium": "referral",
+      "channel": "Referral",
+      "n": 855
+    }
+  ],
+  "page_view_product_paths_ignored": 2138423,
+  "demographic_noise": {
+    "users_with_conflicting_gender_pct": 66.6,
+    "users_with_conflicting_age_pct": 92.4,
+    "note": "Demographic columns vary row-to-row for the same visitor; resolved by per-visitor majority vote."
+  },
+  "bot_users_removed": 26,
+  "bot_events_removed": 136961,
+  "sessions": 995942,
+  "session_start_events": 996383,
+  "session_engagement_mix": {
+    "product_explorer": 0.4639,
+    "bouncer": 0.2506,
+    "browser": 0.1999,
+    "cart_abandoner": 0.0674,
+    "converter": 0.0182
+  },
+  "tx_lines": 27500,
+  "tx_unique_transactions": 18335,
+  "tx_join": {
+    "purchase_events": 18248,
+    "unique_purchase_transactions": 18240,
+    "transactions_matched": 18220,
+    "match_rate_pct": 99.89,
+    "tx_lines_without_activity": 170,
+    "revenue_reconciliation_within_1pct": 83.25
+  },
+  "interactions": {
+    "view_item": 1132447,
+    "add_to_cart": 212606,
+    "purchase": 27330
+  },
+  "users_clean": 744934,
+  "segment_mix": {
+    "window_shopper": 293639,
+    "casual_browser": 177472,
+    "bouncer": 149897,
+    "cart_abandoner": 62168,
+    "frequent_viewer": 44615,
+    "one_time_purchaser": 16309,
+    "repeat_purchaser": 834
+  },
+  "events_clean": 6456760,
+  "date_range": [
+    "2024-06-11 07:00:21.924502",
+    "2025-06-08 06:58:13.803792"
+  ],
+  "seconds": 26.7
+}
