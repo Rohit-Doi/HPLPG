@@ -38,7 +38,17 @@ orders. Everything is learned from the two provided datasets only: 6.59M GA4-sty
   - emails → `outbox.log`;
   - hero copy → templates.
 
+<<<<<<< HEAD
 ## 2. Results (temporal hold-out on genuinely new visitors)
+=======
+### System Requirements
+- **Python**: 3.11 or higher
+- **Node.js**: 18.0 or higher
+- **npm**: 9.0 or higher
+- **Git**: Latest version
+- **RAM**: Minimum 8GB (16GB recommended for data processing)
+- **Storage**: At least 5GB free space
+>>>>>>> 6af4f6e9c0299c83f1b344c79c677ef8a2823fc8
 
 **How it was tested**
 - Models are trained only on data from **before 2025-05-01**.
