@@ -2,7 +2,7 @@
 
 NetElixir **AIgnition 2.0** challenge. An AI agent that builds a personalized landing page for **first-time / guest visitors** (the
 cold-start problem) of a fashion e-commerce store. It keeps personalizing as the visitor browses, answers a short quiz, signs in and
-orders. Everything is learned from the two provided datasets only: 6.59M GA4-style events and 27.5k transaction lines.
+orders. Everything is learned from the two provided datasets only: 6.59M GA4-style events and 27.5k transaction lines. 
 
 ![AURA home page](docs/images/home.png)
 
